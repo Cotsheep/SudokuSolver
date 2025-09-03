@@ -1,0 +1,43 @@
+# Project: X-sudoku
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = mainWork.o solveSAT.o ioWindow.o generateSudokuPuzzle.o tools.o CNFList.o
+LINKOBJ  = mainWork.o solveSAT.o ioWindow.o generateSudokuPuzzle.o tools.o CNFList.o
+LIBS     = -L"D:/app/MinGW/mingw64/lib" -L"D:/app/MinGW/mingw64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/app/MinGW/mingw64/include" -I"D:/app/MinGW/mingw64/x86_64-w64-mingw32/include" -I"D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include"
+CXXINCS  = -I"D:/app/MinGW/mingw64/include" -I"D:/app/MinGW/mingw64/x86_64-w64-mingw32/include" -I"D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include" -I"D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++"
+BIN      = X-sudoku.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+mainWork.o: mainWork.cpp
+	$(CPP) -c mainWork.cpp -o mainWork.o $(CXXFLAGS)
+
+solveSAT.o: solveSAT.cpp
+	$(CPP) -c solveSAT.cpp -o solveSAT.o $(CXXFLAGS)
+
+ioWindow.o: ioWindow.cpp
+	$(CPP) -c ioWindow.cpp -o ioWindow.o $(CXXFLAGS)
+
+generateSudokuPuzzle.o: generateSudokuPuzzle.cpp
+	$(CPP) -c generateSudokuPuzzle.cpp -o generateSudokuPuzzle.o $(CXXFLAGS)
+
+tools.o: tools.cpp
+	$(CPP) -c tools.cpp -o tools.o $(CXXFLAGS)
+
+CNFList.o: CNFList.cpp
+	$(CPP) -c CNFList.cpp -o CNFList.o $(CXXFLAGS)
