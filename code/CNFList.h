@@ -20,6 +20,7 @@ struct LiteralNode
 struct ClauseNode
 {
     int num;// number of literals
+    bool inCNFList;
     ClauseNode *pre;
     ClauseNode *nextt;
     LiteralNode *first;// pointer to the first literal
@@ -47,5 +48,9 @@ public:
     void DeleteClause(ClauseNode *clause);
     void DeleteLiteral(LiteralNode *literal);
     void copyCNFList(const CNFList *other);// copy constructor
+    void pullOut(ClauseNode *clause);
+    void pullOut(LiteralNode *literal);
+    void reinsert(ClauseNode *clause);
+    void reinsert(LiteralNode *literal);
 };
 

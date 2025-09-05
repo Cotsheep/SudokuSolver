@@ -15,7 +15,7 @@ class Queue// a simple queue by myself
 
     struct Node {
         T data;
-        Node* next;
+        Node *next;
         Node();
         Node(T _data)
         {
@@ -26,10 +26,10 @@ class Queue// a simple queue by myself
     };
     Node *headNode;
     Node *tailNode;
+    int _size;
 
     public:
 
-    int _size;
     Queue()
     {
         headNode = NULL;
@@ -38,7 +38,17 @@ class Queue// a simple queue by myself
     } 
     ~Queue() 
     {
-        while (!empty())pop();
+        // printf("Queue destructing(%d)...\n", _size);
+
+        while (!empty())
+        {
+            // printf("%d ", _size);
+            // printf("popping:");
+            pop();
+            // printf(" done\n");
+        }
+        
+        // printf("Queue destructed.\n");
     }
     void push(T value) 
     {
@@ -50,9 +60,16 @@ class Queue// a simple queue by myself
     }
     void pop() 
     {
+
+        // printf("p->");// 调试析构函数爆炸时用的
+        
         if (empty()) return;
         Node *temp = headNode;
         headNode = headNode->next;
+        
+        // printf("3->");
+        // if(!temp){printf("Error: temp is NULL in pop()\n"); return ;}
+
         delete temp;
         _size--;
         if (!headNode) tailNode = NULL;
@@ -69,4 +86,5 @@ class Queue// a simple queue by myself
     {
         return _size;
     }
+
 };
