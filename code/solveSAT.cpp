@@ -1,6 +1,6 @@
 #include "global.h"
 
-#define MAXN 50005
+// #define MAXN 50005
 
 void Restore(CNFList *cnf, Queue <ClauseNode*> &clauseQ, Queue <LiteralNode*> &literalQ, int pos = 0)
 {
@@ -26,9 +26,10 @@ void Restore(CNFList *cnf, Queue <ClauseNode*> &clauseQ, Queue <LiteralNode*> &l
 
 bool DPLL(int ans[], CNFList *cnf, int depth)
 {
-    // printf("\n\n\ndfs depth:%d\n", depth);
-    // printf("DPLL called. clauseNum: %d, varNum: %d, unitClauseNum: %d\n", cnf->clauseNum, cnf->varNum, cnf->unitClauseNum);
-    // cnf->printCNFList();
+    printf("\n\n\ndfs depth:%d\n", depth);
+    printf("DPLL called. clauseNum: %d, varNum: %d, unitClauseNum: %d\n", cnf->clauseNum, cnf->varNum, cnf->unitClauseNum);
+    cnf->printCNFList();
+    // cnf->printLiteralList();
     // putchar(10);
 
     Queue <ClauseNode*> clauseQ;
@@ -48,7 +49,7 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         {
             if(pClause->num == 1) 
             {
-                // printf("unit clause found: %d\n", pClause->first->varIndex);
+                // printf("unit clause found: %d\n", pClause->first->varIndex * (pClause->first->sign ? 1 : -1));
                 break;
             }
             pClause = pClause->nextt;
@@ -63,58 +64,117 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         ans[var] = sign ? 1 : -1;
 
         // delete clauses containing this literal
-        pClause = cnf->clauseHead;
-        pLiteral = NULL;
-        while(pClause)//Clause cycle
+        // pClause = cnf->clauseHead;
+        pLiteral = cnf->literalList[var];
+        // while(pLiteral)//Clause cycle
+        // {
+            // tempClause = pClause;
+            // pClause = pClause->nextt;
+            
+            // if(tempClause->num == 0)//empty clause
+            // {
+            //     // cnf->DeleteClause(tempClause);
+            //     Restore(cnf, clauseQ, literalQ, 1);
+            //     return false;
+            // }
+            
+            // pLiteral = tempClause->first;
+        while(pLiteral)//Literal cycle
         {
-            tempClause = pClause;
-            pClause = pClause->nextt;
-            
-            if(tempClause->num == 0)//empty clause
+            tempLiteral = pLiteral;
+            pLiteral = pLiteral->nextPal;
+
+            // printf("checking literal: %d %d\n", tempLiteral->varIndex * (tempLiteral->sign ? 1 : -1), var);
+            // if(tempLiteral->nextPal)
+            // {
+            //     printf("next literal check %d -> %d\n", tempLiteral->varIndex, tempLiteral->nextPal->varIndex);
+            // }
+
+            if(tempLiteral->nextPal == cnf->literalList[var])
             {
+                printf("Error: Cycle!!!\n");
+                exit(0);
+            }
+            if(tempLiteral->nextPal == tempLiteral)
+            {
+                printf("Error: point to itself!\n");
+                exit(0);
+            }
+            if(tempLiteral->varIndex != var)
+            {
+                printf("Error: WTF!!\n");
+                exit(0);
+            }
+            
+            // cnf->printLiteralList();
+            // putchar(10);
+
+            /*
+            down here is some debug code, ultimately realized that
+            when I want to pull out literals in literalList,
+            I should use tempLiteral to represent pLiteral.
+            Otherwise it will lose the pointer to next pal.
+            */
+
+            // printf("checking literal: %d", pLiteral->varIndex * (pLiteral->sign ? 1 : -1));
+            // printf(" in clause: ");
+            // pLiteral->belongClause->print();
+            // printf("next: ");
+            // if(pLiteral->nextPal)pLiteral->nextPal->belongClause->print();
+            // else printf("NULL");
+            // putchar(10);
+
+            if(!tempLiteral->inCNFList || !tempLiteral->belongClause->inCNFList) 
+            {
+                // if(pLiteral->nextPal)
+                // printf("next literal check %d -> %d\n", pLiteral->varIndex, pLiteral->nextPal->varIndex);
+                // printf("jmp\n");
+                
+                // pLiteral = pLiteral->nextPal;
+                continue;
+            }
+
+            tempClause = tempLiteral->belongClause;
+            // if(tempLiteral->varIndex == var)
+            // {
+            if(tempLiteral->sign == sign)
+            {
+                // printf("clause will be deleted: ");
+                
                 // cnf->DeleteClause(tempClause);
-                Restore(cnf, clauseQ, literalQ, 1);
-                return false;
-            }
-            
-            pLiteral = tempClause->first;
-            while(pLiteral)//Literal cycle
-            {
-                tempLiteral = pLiteral;
-                pLiteral = pLiteral->nextt;
-                if(tempLiteral->varIndex == var)
+                
+                if(tempClause->inCNFList)
                 {
-                    if(tempLiteral->sign == sign)
-                    {
-                        // printf("clause will be deleted: ");
-                        
-                        // cnf->DeleteClause(tempClause);
-                        cnf->pullOut(tempClause);
-                        clauseQ.push(tempClause);
-
-                        // cnf->printCNFList();
-                        // putchar(10);
-
-                        break;
-                    }
-                    else
-                    {
-                        if(tempClause->num == 1)
-                        {
-                            Restore(cnf, clauseQ, literalQ, 2);
-                            // printf("found empty clause after unit propagation\n");
-                            return false;
-                        }
-                        
-                        // cnf->DeleteLiteral(tempLiteral);
-                        cnf->pullOut(tempLiteral);
-                        literalQ.push(tempLiteral);
-
-                        continue;
-                    }
+                    cnf->pullOut(tempClause);
+                    clauseQ.push(tempClause);
                 }
+                
+                // cnf->printCNFList();
+                // putchar(10);
+                
+                // break;
             }
+            else
+            {
+                if(tempClause->num == 1)
+                {
+                    Restore(cnf, clauseQ, literalQ, 2);
+                    // printf("found empty clause after unit propagation\n");
+                    return false;
+                }
+                
+                // cnf->DeleteLiteral(pLiteral);
+                cnf->pullOut(tempLiteral);
+                literalQ.push(tempLiteral);
+                
+                // continue;
+            }
+            // }
+            // if(pLiteral->nextPal)
+            //     printf("next literal check %d -> %d\n", pLiteral->varIndex, pLiteral->nextPal->varIndex);
+            // pLiteral = pLiteral->nextPal;
         }
+        // }
     }
 
     // #ifdef DEBUG
