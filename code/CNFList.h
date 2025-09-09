@@ -49,7 +49,7 @@ public:
     void checkSAT(int ans[]);
     void clear();
     void printCNFList();
-    void printLiteralList();
+    void printLiteralList(int var = 0);
     void addClause(ClauseNode *clause);
     void buildCNFList(string fileName);
     void DeleteClause(ClauseNode *clause);
