@@ -39,7 +39,7 @@ int main()
 	testIn[30] = "D:\\code\\C\\SATsolver\\testSamples\\unsat\\u-problem7-50.cnf";
 
 	CNFList *testCNF = new CNFList();
-	testCNF->buildCNFList(testIn[12]);
+	testCNF->buildCNFList(testIn[9]);
 	CNFList *copyCNF = new CNFList();
 	copyCNF->copyCNFList(testCNF);
 	int ans[MAXN] = {0};
@@ -48,7 +48,7 @@ int main()
 
 	// double start = 
 
-	printf("could find answer: %s\n", DPLL(ans, testCNF, 1) ? "YES" : "NO");
+	printf("could find answer: %s\n", DPLLLauncher(ans, testCNF) ? "YES" : "NO");
 	printf("varNum: %d\n", testCNF->varNum);
 	for(int i = 1; i <= testCNF->varNum; i++)
 	printf("%d ", ans[i]);

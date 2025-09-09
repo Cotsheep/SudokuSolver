@@ -17,22 +17,40 @@ void Restore(CNFList *cnf, Queue <ClauseNode*> &clauseQ, Queue <LiteralNode*> &l
     return ;
 }
 
+ClauseNode* clauseS[50000];int clauseTop = 0;
+LiteralNode* literS[50000];int literTop = 0;
+
+void Restore2(CNFList *cnf, int clauseBottom, int literBottom)
+{
+    while(clauseTop > clauseBottom)
+    {
+        cnf->reinsert(clauseS[clauseTop]);
+        clauseTop--;
+    }
+    while(literTop > literBottom)
+    {
+        cnf->reinsert(literS[literTop]);
+        literTop--;
+    }
+    return ;
+}
+
+bool DPLLLauncher(int ans[], CNFList *cnf)
+{
+    clauseTop = 0;
+    literTop = 0;
+    return DPLL(ans, cnf, 1);
+}
+
 bool DPLL(int ans[], CNFList *cnf, int depth)
 {
     // printf("\n\ndfs depth:%d\n", depth);
-    // printf("DPLL called. clauseNum: %d, varNum: %d, unitClauseNum: %d\n", cnf->clauseNum, cnf->varNum, cnf->unitClauseNum);
-    // cnf->printCNFList();
-    // printf("5:\n");
-    // cnf->printLiteralList(5);
-    // cnf->printLiteralList();
-    // putchar(10);
+    // printf("DPLL called. clauseNum: %d, varNum: %d, unitClauseNum: %d\n",
+    //  cnf->clauseNum, cnf->varNum, cnf->unitClauseNum);
 
-    Queue <ClauseNode*> clauseQ;
-    Queue <LiteralNode*> literalQ;
     Queue <ClauseNode*> unitClauseQ;
-    // ClauseNode* clauseQ[5000];
-    // LiteralNode* literalQ[5000];
-    
+    int clauseBottom = clauseTop;
+    int literBottom = literTop;
 
     ClauseNode *pClause;
     LiteralNode *pLiteral;
@@ -43,6 +61,7 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
     while(pClause)
     {
         if(pClause->num == 1) unitClauseQ.push(pClause);
+        else if(depth > 1)break;
         pClause = pClause->nextt;
     }
 
@@ -51,22 +70,8 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         pClause = unitClauseQ.front();
         unitClauseQ.pop();
         if(!pClause->inCNFList) continue;
-        // pClause = cnf->clauseHead;
-        // pLiteral = NULL;
-        // tempClause = NULL;
-        // tempLiteral = NULL;
-        // while(pClause)
-        // {
-        //     if(pClause->num == 1) 
-        //     {
-        //         // printf("unit clause found: %d\n", pClause->first->varIndex * (pClause->first->sign ? 1 : -1));
-        //         break;
-        //     }
-        //     pClause = pClause->nextt;
-        // }
         if(!pClause) // should not happen
         {
-            // printf("Error: unitClauseNum is f**king wrong\n");
             printf("Error: the clause in unitQ is f**king error\n");
             return false;
         }
@@ -76,32 +81,10 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
 
         pLiteral = cnf->literalList[var];
 
-        // if(var == 5)
-        // {
-        //     cnf->printLiteralList(5);
-        // }
-
         while(pLiteral)
         {
             tempLiteral = pLiteral;
             pLiteral = pLiteral->nextPal;
-
-            if(tempLiteral->nextPal == cnf->literalList[var])
-            {
-                printf("Error: Cycle!!! %d\n", tempLiteral->varIndex);
-                // printf("%d %d", tempLiteral->varIndex, cnf->literalList[var]->varIndex);
-                exit(0);
-            }
-            if(tempLiteral->nextPal == tempLiteral)
-            {
-                printf("Error: point to itself!\n");
-                exit(0);
-            }
-            if(tempLiteral->varIndex != var)
-            {
-                printf("Error: WTF!!\n");
-                exit(0);
-            }
 
             if(!tempLiteral->inCNFList || !tempLiteral->belongClause->inCNFList) 
             {
@@ -114,20 +97,19 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
                 if(tempClause->inCNFList)
                 {
                     cnf->pullOut(tempClause);
-                    clauseQ.push(tempClause);
-
+                    clauseS[++clauseTop] = tempClause;
                 }
             }
             else
             {
                 if(tempClause->num == 1)
                 {
-                    Restore(cnf, clauseQ, literalQ);
+                    Restore2(cnf, clauseBottom, literBottom);
                     return false;
                 }
                 
                 cnf->pullOut(tempLiteral);
-                literalQ.push(tempLiteral);
+                literS[++literTop] = tempLiteral;
 
                 if(tempClause->num == 1)
                 {
@@ -135,11 +117,6 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
                 }
             }
         }
-
-        // printf("After unit propagation, clauseNum: %d, varNum: %d, unitClauseNum: %d\n", cnf->clauseNum, cnf->varNum, cnf->unitClauseNum);
-        // cnf->printLiteralList(5);
-        // putchar(10);
-
     }
 
 
@@ -176,33 +153,12 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         }
         else
         {
-            Restore(cnf, clauseQ, literalQ);
-
-
-            // printf("ALL FAILED, new clause %d in %p deleted.\n",
-            // newUnitClause->first->varIndex, newUnitClause);
-
-
+            Restore2(cnf, clauseBottom, literBottom);
             cnf->DeleteClause(newUnitClause);
-
-            // printf("after deletion:\n");
-            // cnf->printLiteralList(5);
-
             return false;
         }
     }
     printf("Error: should f**king not reach here in DPLL bottom\n");
     return false;
 }
-/*
-
-used to using this sample to debug #2.4
-c
-p cnf 6 5
-1 2 0
-5 6 0
--5 6 0
--5 -6 0
-5 -6 0
-*/
 
