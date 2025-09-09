@@ -29,6 +29,7 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
 
     Queue <ClauseNode*> clauseQ;
     Queue <LiteralNode*> literalQ;
+    Queue <ClauseNode*> unitClauseQ;
     // ClauseNode* clauseQ[5000];
     // LiteralNode* literalQ[5000];
     
@@ -37,24 +38,36 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
     LiteralNode *pLiteral;
     ClauseNode *tempClause;
     LiteralNode *tempLiteral;
-    while(cnf->unitClauseNum)
+
+    pClause = cnf->clauseHead;
+    while(pClause)
     {
-        pClause = cnf->clauseHead;
-        pLiteral = NULL;
-        tempClause = NULL;
-        tempLiteral = NULL;
-        while(pClause)
-        {
-            if(pClause->num == 1) 
-            {
-                // printf("unit clause found: %d\n", pClause->first->varIndex * (pClause->first->sign ? 1 : -1));
-                break;
-            }
-            pClause = pClause->nextt;
-        }
+        if(pClause->num == 1) unitClauseQ.push(pClause);
+        pClause = pClause->nextt;
+    }
+
+    while(!unitClauseQ.empty())
+    {
+        pClause = unitClauseQ.front();
+        unitClauseQ.pop();
+        if(!pClause->inCNFList) continue;
+        // pClause = cnf->clauseHead;
+        // pLiteral = NULL;
+        // tempClause = NULL;
+        // tempLiteral = NULL;
+        // while(pClause)
+        // {
+        //     if(pClause->num == 1) 
+        //     {
+        //         // printf("unit clause found: %d\n", pClause->first->varIndex * (pClause->first->sign ? 1 : -1));
+        //         break;
+        //     }
+        //     pClause = pClause->nextt;
+        // }
         if(!pClause) // should not happen
         {
-            printf("Error: unitClauseNum is f**king wrong\n");
+            // printf("Error: unitClauseNum is f**king wrong\n");
+            printf("Error: the clause in unitQ is f**king error\n");
             return false;
         }
         int var = pClause->first->varIndex;
@@ -115,6 +128,11 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
                 
                 cnf->pullOut(tempLiteral);
                 literalQ.push(tempLiteral);
+
+                if(tempClause->num == 1)
+                {
+                    unitClauseQ.push(tempClause);
+                }
             }
         }
 
