@@ -39,29 +39,37 @@ int main()
 	testIn[30] = "D:\\code\\C\\SATsolver\\testSamples\\unsat\\u-problem7-50.cnf";
 
 	CNFList *testCNF = new CNFList();
-	testCNF->buildCNFList(testIn[9]);
+	testCNF->buildCNFList(testIn[30]);
 	CNFList *copyCNF = new CNFList();
 	copyCNF->copyCNFList(testCNF);
 	int ans[MAXN] = {0};
 	printf("SAT\n");
 	testCNF->printCNFList();
-
-	// double start = 
+	putchar(10);
 
 	printf("could find answer: %s\n", DPLLLauncher(ans, testCNF) ? "YES" : "NO");
 	printf("varNum: %d\n", testCNF->varNum);
 	for(int i = 1; i <= testCNF->varNum; i++)
-	printf("%d ", ans[i]);
+		printf("%d ", ans[i] * i);
 	putchar(10);
 	copyCNF->checkSAT(ans);
 
-
-//	Queue <int > test;
-//	for(int i = 1; i <= 7; ++i)
-//	{
-//		test.push(i);
-//	}
-//	QfuncTest(test);
-	// printf("after QfuncTest, size: %d\n", test.size());
+//	SegTree *test, *copyTest;
+//	int J[10] = {0, 1, 3, 5, 7, 9, 2, 4, 6, 8};
+//	test = new SegTree();
+//	test->build(J, test->root, 1, 9);
+//	test->update(test->root, 5, false, 3);
+//	test->update(test->root, 2, 10, 1);
+//	test->update(test->root, 5, 11, 1);
+//	test->printTree();
+//	putchar(10);
+//
+//	copyTest = new SegTree();
+//	copyTest->copyTree(test);
+//	copyTest->update(copyTest->root, 3, false, 3);
+//	copyTest->update(copyTest->root, 2, false, 3);
+//	copyTest->printTree();
+//	putchar(10);
+//	test->printTree();
 	return 0;
 }

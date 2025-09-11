@@ -1,11 +1,16 @@
 #include "global.h"
 
+#define METHOD 2 // 1 for origin, 2 for SegTree
+
 void Restore(CNFList *cnf, Queue <ClauseNode*> &clauseQ, Queue <LiteralNode*> &literalQ)
 {
     while(!literalQ.empty())
     {
         LiteralNode *tempLiter = literalQ.front();
         cnf->reinsert(tempLiter);
+        cnf->J->update(cnf->J->root, 
+            tempLiter->varIndex, 
+            tempLiter->belongClause->num, 2);
         literalQ.pop();
     }
     while(!clauseQ.empty())
@@ -17,8 +22,8 @@ void Restore(CNFList *cnf, Queue <ClauseNode*> &clauseQ, Queue <LiteralNode*> &l
     return ;
 }
 
-ClauseNode* clauseS[50000];int clauseTop = 0;
-LiteralNode* literS[50000];int literTop = 0;
+ClauseNode* clauseS[500000];int clauseTop = 0;
+LiteralNode* literS[500000];int literTop = 0;
 
 void Restore2(CNFList *cnf, int clauseBottom, int literBottom)
 {
@@ -35,11 +40,16 @@ void Restore2(CNFList *cnf, int clauseBottom, int literBottom)
     return ;
 }
 
+int newCnt;
+
 bool DPLLLauncher(int ans[], CNFList *cnf)
 {
     clauseTop = 0;
     literTop = 0;
-    return DPLL(ans, cnf, 1);
+    newCnt = 0;
+    bool flag = DPLL(ans, cnf, 1);
+    printf("new times: %d\n", newCnt);
+    return flag;
 }
 
 bool DPLL(int ans[], CNFList *cnf, int depth)
@@ -79,6 +89,10 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         bool sign = pClause->first->sign;
         ans[var] = sign ? 1 : -1;
 
+        // printf("deleting variable %d\n", var);
+
+        cnf->J->update(cnf->J->root, var, false, 3);
+
         pLiteral = cnf->literalList[var];
 
         while(pLiteral)
@@ -97,6 +111,7 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
                 if(tempClause->inCNFList)
                 {
                     cnf->pullOut(tempClause);
+                    // cnf->disable(tempClause);
                     clauseS[++clauseTop] = tempClause;
                 }
             }
@@ -105,10 +120,12 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
                 if(tempClause->num == 1)
                 {
                     Restore2(cnf, clauseBottom, literBottom);
+                    // cnf->J->update(cnf->J->root, var, true, 3);
                     return false;
                 }
                 
                 cnf->pullOut(tempLiteral);
+                // cnf->disable(tempLiteral);
                 literS[++literTop] = tempLiteral;
 
                 if(tempClause->num == 1)
@@ -119,17 +136,48 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         }
     }
 
+    // cnf->J->printTree();
+
 
     if(!cnf->clauseHead)
         return true;
 
     // choose a literal to branch
-    pClause = cnf->clauseHead;
-    pLiteral = pClause->first;
-    int var = pLiteral->varIndex;
-    bool sign = pLiteral->sign;
+    int var;
+    bool sign;
+    if(METHOD == 1)// origin method
+    {
+        pClause = cnf->clauseHead;
+        pLiteral = pClause->first;
+        var = pLiteral->varIndex;
+        sign = pLiteral->sign;
+    }
+    else if(METHOD == 2)// SegTree method
+    {
+        var = cnf->J->query();
+        if(var == -1)
+        {
+            printf("Error: could not find a variable to branch.\n");
+            // putchar(10);
+	        // cnf->J->printTree();
+            return false;
+        }
+        pLiteral = cnf->literalList[var];
+        while(pLiteral && !pLiteral->inCNFList)
+            pLiteral = pLiteral->nextPal;
+        
+        if(!pLiteral)
+        {
+            printf("Error: could not find a literal to branch on.\n");
+            return false;
+        }
+        sign = pLiteral->sign;
+    }
+    // end choose
 
     ClauseNode *newUnitClause = new ClauseNode();
+    newCnt++;
+
     newUnitClause->initUnitClause(var, sign);
     cnf->addClause(newUnitClause);
 
@@ -155,6 +203,9 @@ bool DPLL(int ans[], CNFList *cnf, int depth)
         {
             Restore2(cnf, clauseBottom, literBottom);
             cnf->DeleteClause(newUnitClause);
+
+            cnf->J->update(cnf->J->root, var, true, 3);
+            // printf("%d recoverd\n", var);
             return false;
         }
     }

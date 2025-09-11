@@ -43,6 +43,7 @@ public:
     ~CNFList();// destroy itself when DPLL 
     ClauseNode *clauseHead;
     LiteralNode *literalList[MAXN];// literalList[i] is the head of the i'th variable
+    SegTree *J;// J[i] is the sum of the clause's length that i'th variable appears in. 
     int clauseNum;
     int varNum;
     int unitClauseNum;
@@ -56,9 +57,13 @@ public:
     void DeleteLiteral(LiteralNode *literal);
     void addToLiteralList(LiteralNode *literal);
     void copyCNFList(const CNFList *other);// copy constructor
+    void disable(ClauseNode *clause);
+    void disable(LiteralNode *literal);
     void pullOut(ClauseNode *clause);
     void pullOut(LiteralNode *literal);
     void reinsert(ClauseNode *clause);
     void reinsert(LiteralNode *literal);
+    void reable(ClauseNode *clause);
+    void reable(LiteralNode *literal);
 };
 
