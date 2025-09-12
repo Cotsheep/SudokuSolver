@@ -31,6 +31,22 @@ char readChar() {
     while (c == ' ' || c == '\n' || c == '\r' || c == '\t') c = getchar();
     return c;
 }
+void Swap(int &a, int &b) 
+{
+    int temp = a;
+    a = b;
+    b = temp;
+    return ;
+}
+void shuffle(int a[], int n)// 0 ~ n-1
+{
+    for(int i = n - 1; i > 0; --i)
+    {
+        int j = rand() % (i + 1);
+        Swap(a[i], a[j]);
+    }
+    return ;
+}
 
 SegTree::TreeNode::TreeNode()
 {
@@ -56,7 +72,6 @@ void SegTree::TreeNode::copyVal(TreeNode *other)
 SegTree::SegTree()
 {
     root = new TreeNode();
-    srand(time(nullptr));
 }
 SegTree::~SegTree()
 {

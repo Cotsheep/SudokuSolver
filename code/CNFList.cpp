@@ -22,9 +22,6 @@ LiteralNode::LiteralNode(int _varIndex, LiteralNode *last)
 }
 void LiteralNode::Delete()
 {
-    // if(pre) pre->nextt = nextt;
-    // else if(belongClause) belongClause->first = nextt;
-    // if(nextt) nextt->pre = pre;
     delete this;
 }
 
@@ -121,6 +118,12 @@ void CNFList::checkSAT(int ans[])
     printf("AC! Clauses satisified!\n");
     return ;
 }
+
+void standardCheck()
+{
+    
+}
+
 void CNFList::DeleteClause(ClauseNode *clause)
 {
     pullOut(clause);
@@ -130,9 +133,6 @@ void CNFList::DeleteClause(ClauseNode *clause)
 void CNFList::DeleteLiteral(LiteralNode *literal)
 {
     pullOut(literal);
-
-    // printf("Literal deleting: %p\n", literal);
-
     literal->Delete();
     return ;
 }
@@ -158,41 +158,34 @@ void CNFList::addClause(ClauseNode *clause)
     }
     return ;
 }
-void CNFList::addToLiteralList(LiteralNode *literal)
+void CNFList::addToLiteralList(LiteralNode *literal, int copying)
 {
     if(!literal){printf("you are adding an fking empty literal to list!"); return ;}
     if(literal->prePal || literal->nextPal){printf("this literal is already in a literalList!"); return ;}
     
     int var = literal->varIndex;
-    if(literalList[var])literalList[var]->prePal = literal;
+    if(copying)printf("Adding literal %d%c to literalList[%d]\n", var, literal->sign ? '+' : '-', var);
+    
+    if(literalList[var])
+    {
+        if(copying)
+        {
+            printf("literalList[%d] already has elements when adding\n", var);
+            printf("the existing pointer is: %p\n", literalList[var]);
+            printf("the existing elements is: %d\n", literalList[var]->varIndex * (literalList[var]->sign ? 1 : -1));
+        }
+        literalList[var]->prePal = literal;
+    }
+
+    if(copying)printf("literalList added\n");
+
     literal->nextPal = literalList[var];
     literal->prePal = NULL;
     literalList[var] = literal;
     literal->inCNFList = true;
+
     return ;
 }
-// void CNFList::disable(ClauseNode *clause)
-// {
-//     if(clause->cnf != this){printf("this clause's mother isn't me.\n(disable)");return ;}
-//     if(!clause->inCNFList)return ;
-//     clause->inCNFList = false;
-//     if(clause->num == 1) unitClauseNum--;
-//     clauseNum--;
-//     return ;
-// }
-// void CNFList::disable(LiteralNode *liter)
-// {
-//     ClauseNode *clause = liter->belongClause;
-//     if(!clause){printf("this liter doesn't have belongClause?!\n"); return ;}
-//     if(clause->cnf != this){printf("this liter's mother isn't me.\n");return ;}
-    
-//     if(!liter->inCNFList || !clause->inCNFList) return ;
-//     liter->inCNFList = false;
-//     clause->num--;
-//     if(clause->num == 1) unitClauseNum++;
-//     else if(clause->num == 0) unitClauseNum--;
-//     return ;
-// }
 void CNFList::pullOut(ClauseNode *clause)
 {
     CNFList *cnf = clause->cnf;
@@ -212,13 +205,12 @@ void CNFList::pullOut(ClauseNode *clause)
     LiteralNode *pLiteral = clause->first;
     while(pLiteral)
     {
-        if(pLiteral->inCNFList) 
-        {
-            cnf->J->update(cnf->J->root, 
-                pLiteral->varIndex, -clause->num, 2);
-        }
+        cnf->J->update(cnf->J->root, 
+            pLiteral->varIndex, -clause->num, 2);
         pLiteral = pLiteral->nextt;
     }
+
+    if(clause->num < 0) {printf("Error: clause num < 0 when pulling clause\n"); clause->print(); return ;}
 
     return ;
 }
@@ -239,12 +231,6 @@ void CNFList::pullOut(LiteralNode *liter)
     if(liter->nextt) liter->nextt->pre = liter->pre;
 
     int var = liter->varIndex;
-
-    // if(liter->prePal && literalList[var] == liter)
-    // {
-    //     printf("Error: pulling literal from literalList\n");
-    //     exit(0);
-    // }
 
     if(liter->nextPal) liter->nextPal->prePal = liter->prePal;
     if(liter->prePal) liter->prePal->nextPal = liter->nextPal;
@@ -268,30 +254,10 @@ void CNFList::pullOut(LiteralNode *liter)
         
     clause->num--;
 
+    if(clause->num < 0) {printf("Error: clause num < 0 when pulling literal\n"); clause->print(); return ;}
+
     return ;
 }
-// void CNFList::reable(ClauseNode *clause)
-// {
-//     if(clause->cnf != this)
-//     {printf("this clause's mother isn't me.(reable)\n");return ;}
-//     if(clause->inCNFList)
-//     {printf("the reabling clause is in CNF list!\n");return ;}
-    
-//     clause->inCNFList = true;
-//     clauseNum++;
-//     if(clause->num == 1) unitClauseNum++;
-// }
-// void CNFList::reable(LiteralNode *liter)
-// {
-//     ClauseNode *clause = liter->belongClause;
-//     if(liter->inCNFList)
-//     {printf("the reabling literal is in CNF list!\n");return ;}
-    
-//     liter->inCNFList = true;
-//     clause->num++;
-//     if(clause->inCNFList && clause->num == 1) unitClauseNum++;
-//     if(clause->inCNFList && clause->num == 2) unitClauseNum--;
-// }
 void CNFList::reinsert(ClauseNode *clause)
 {
     CNFList *cnf = clause->cnf;
@@ -308,7 +274,8 @@ void CNFList::reinsert(ClauseNode *clause)
     LiteralNode *pLiteral = clause->first;
     while(pLiteral)
     {
-        cnf->J->update(cnf->J->root, pLiteral->varIndex, clause->num, 2);
+        if(pLiteral->inCNFList) 
+            cnf->J->update(cnf->J->root, pLiteral->varIndex, clause->num, 2);
         pLiteral = pLiteral->nextt;
     }
 
@@ -369,7 +336,7 @@ void CNFList::clear()
         pClause = pClause->nextt;
         tempClause->Delete();
     }
-    for(int i = 1; i <= varNum; ++i) literalList[i] = NULL;
+    for(int i = 1; i < MAXN; ++i) literalList[i] = NULL;
     clauseHead = NULL;
     clauseNum = 0;
     varNum = 0;
@@ -381,13 +348,16 @@ void CNFList::copyCNFList(const CNFList *other)// copy
 {
     
     // printf("COPYING\n----------------------------\n");
-    
+    clear();
     clauseNum = other->clauseNum;
     varNum = other->varNum;
     unitClauseNum = other->unitClauseNum;
     clauseHead = NULL;
     ClauseNode *pClause = other->clauseHead;
     ClauseNode *lastClause = NULL;
+    
+    int clauseCnt = 0;
+
     while(pClause)
     {
         ClauseNode *newClause = new ClauseNode();
@@ -401,6 +371,9 @@ void CNFList::copyCNFList(const CNFList *other)// copy
 
         LiteralNode *pLiteral = pClause->first;
         LiteralNode *lastLiteral = NULL;
+
+        int literalCnt = 0;
+
         while(pLiteral)
         {
             LiteralNode *newLiteral = new LiteralNode();
@@ -410,36 +383,62 @@ void CNFList::copyCNFList(const CNFList *other)// copy
             newLiteral->pre = lastLiteral;
             if(lastLiteral) lastLiteral->nextt = newLiteral;
             else newClause->first = newLiteral;
+            // printf("Adding %d\n", ++literalCnt);
             addToLiteralList(newLiteral);
+
+            // if(++literalCnt >= 30){printf("literal overwhelm!\n"); exit(0);}
+            // printf("Copied literal %d in clause %d\n", ++literalCnt, clauseCnt + 1);
 
             lastLiteral = newLiteral;
             pLiteral = pLiteral->nextt;
         }
         pClause = pClause->nextt;
+
+        // printf("Copied clause %d\n", ++clauseCnt);
     }
+
+    // printf("Copied %d clauses and %d variables.\n", clauseNum, varNum);
+
     J->copyTree(other->J);
     return ;
 }
-void CNFList::buildCNFList(string fileName)
+void CNFList::buildCNFList(string fileName, int debug)
 {
     freopen(fileName.c_str(), "r", stdin);
+
+    // if(debug)
+    // {
+    //     printf("debug: ");
+    //     putchar(getchar());
+    // }
+
+    // printf("Building CNFList from %s\n", fileName.c_str());
 
     clauseHead = NULL;
     ClauseNode *lastClause = NULL;
     
     string lines;
     int tempJ[MAXN];for(int i = 0; i < MAXN; ++i) tempJ[i] = 0;
+    
+    int lineCnt = 0;
+
+    // printf("Reading CNF file...\n");
+    
     while(getline(cin, lines))// read datas from the file
     {
+        if(debug)printf("got in");
+
         if(lines[0] == 'c') continue;
         int p = 0;
         if(lines[0] == 'p') 
         {
             varNum = readInt(lines, p);
-            clauseNum = readInt(lines, p);
+            clauseNum = readInt(lines, p) * 2;
             for(int i = 1; i <= varNum; ++i) literalList[i] = NULL;
             continue;
         }
+
+        if(debug)printf("Reading line %d\n", ++lineCnt);
         
         LiteralNode *lastLiteral = NULL;
         ClauseNode *newClause = new ClauseNode();
@@ -483,6 +482,9 @@ void CNFList::buildCNFList(string fileName)
 
     }
     J->build(tempJ, J->root, 1, varNum);
+
+    freopen("CON", "r", stdin);
+    cin.clear();
     return ;
 }
 void CNFList::printCNFList()

@@ -2,13 +2,17 @@
 #include <string>
 #include <stdio.h>
 #include <iostream>
+#include <cstring>
 #include <random>
 #include <ctime>
 using namespace std;
+#define MAXN 10005
 
 int readInt();
 int readInt(string s, int &p);
 char readChar();
+void Swap(int &a, int &b);
+void shuffle(int a[], int n);// 0 ~ n-1
 
 template<typename T>
 class Queue// a simple queue by myself

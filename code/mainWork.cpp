@@ -13,63 +13,83 @@ void QfuncTest(Queue <int > &q)// attention!! the pointers in q will be the same
 
 int main() 
 {
+	srand(time(nullptr));
 	//   freopen("D:\\code\\C\\SATsolver\\testSamples\\output.out", "w", stdout);
 	string testIn[100];
-	testIn[0] = "D:\\code\\C\\SATsolver\\testSamples\\input.in";
-	
-	// S
-	testIn[1] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\sat-20.cnf";
-	testIn[4] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem1-20.cnf";
-	testIn[5] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem2-50.cnf";
-	testIn[6] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem3-100.cnf";
-	testIn[7] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem6-50.cnf";
-	testIn[8] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem8-50.cnf";
-	testIn[9] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem9-100.cnf";
-	testIn[10] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Sproblem11-100.cnf";
-	testIn[11] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\Stst_v25_c100.cnf";
-	
-	// M
-	testIn[3] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\ais10.cnf";
-	testIn[12] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\problem5-200.cnf";
-	testIn[13] = "D:\\code\\C\\SATsolver\\testSamples\\sat\\problem12-200.cnf";
-	// L
-	
-	//Unsat
-	testIn[2] = "D:\\code\\C\\SATsolver\\testSamples\\unsat\\unsat-5cnf-30.cnf";
-	testIn[30] = "D:\\code\\C\\SATsolver\\testSamples\\unsat\\u-problem7-50.cnf";
+	string fileHead = "D:\\code\\C\\SATsolver\\TEST\\";
+	string SATsolution = "D:\\code\\C\\SATsolver\\TEST\\solution.txt";
+	testIn[1] = fileHead + "1.cnf";
+	testIn[2] = fileHead + "2.cnf";
+	testIn[3] = fileHead + "3.cnf";
+	testIn[4] = fileHead + "4-u.cnf";
+	testIn[5] = fileHead + "5.cnf";	
+	testIn[6] = fileHead + "6.cnf";// solved
+	testIn[7] = fileHead + "7-u.cnf";
+	testIn[8] = fileHead + "8-u.cnf";
+	testIn[9] = fileHead + "9-u.cnf";
+	testIn[10] = fileHead + "10.cnf";
+	testIn[11] = fileHead + "11-u.cnf";// solved
+	testIn[12] = fileHead + "12.cnf";
 
-	CNFList *testCNF = new CNFList();
-	testCNF->buildCNFList(testIn[30]);
-	CNFList *copyCNF = new CNFList();
-	copyCNF->copyCNFList(testCNF);
-	int ans[MAXN] = {0};
-	printf("SAT\n");
-	testCNF->printCNFList();
-	putchar(10);
+	int choose;
 
-	printf("could find answer: %s\n", DPLLLauncher(ans, testCNF) ? "YES" : "NO");
-	printf("varNum: %d\n", testCNF->varNum);
-	for(int i = 1; i <= testCNF->varNum; i++)
-		printf("%d ", ans[i] * i);
-	putchar(10);
-	copyCNF->checkSAT(ans);
+	while((choose = chooseMainMenu()) != 3)
+	{
+		if(choose == 1)
+		{
+			int testFileNum, method;
+			printf("Choose a test file(1~12): ");
+			testFileNum = chooseNum(1, 12);
+			printf("Choose a method(1 for origin, 2 for SegTree): ");
+			method = chooseNum(1, 2);
+			CNFList *cnf = new CNFList(), *cnfCopy = new CNFList();
+			cnf->buildCNFList(testIn[testFileNum]);
+			cnfCopy->copyCNFList(cnf);
+			int ans[MAXN] = {0};
+			memset(ans, 0, sizeof(ans));
+			int branchTime = 0;
+			clock_t startTime = clock();
+			printf("Solving...\n");
+			freopen(SATsolution.c_str(), "w", stdout);
+			bool flag = DPLLLauncher(ans, cnf, branchTime, method);
+			if(flag)
+			{
+				printf("s 1\n");
+				printf("v ");
+				for(int i = 1; i <= cnf->varNum; ++i)
+				{
+					if(ans[i] == 1) printf("%d ", i);
+					else if(ans[i] == -1) printf("%d ", -i);
+					else printf("0 ");
+				}
+				putchar(10);
+			}
+			else
+			{
+				printf("s 0\n");
+			}
+			clock_t endTime = clock();
+			int timeUsed = (int)(endTime - startTime);
+			printf("t %d ms\n", timeUsed);
+			printf("Branch times: %d\n", branchTime);
+			if(flag)cnfCopy->checkSAT(ans);
+			freopen("CON", "w", stdout);
+			delete cnf;
+			delete cnfCopy;
+			printf("Solution written in %s\n", SATsolution.c_str());
+		}
+		else if(choose == 2)
+		{
+			int remain;
+			int sudoku[9][9] = {0};
+			int finalAns[9][9] = {0};
+			printf("Choose the number of elements to remain\n(14~80, if less than 20, it may has multiple solutions)\nchoose: ");
+			remain = chooseNum(14, 80);
+			printf("You chose %d clues to remain.\n", remain);
+			generateSudokuPuzzle(sudoku, finalAns, remain);
+			playSudoku(sudoku, finalAns);
+		}
+	}
 
-//	SegTree *test, *copyTest;
-//	int J[10] = {0, 1, 3, 5, 7, 9, 2, 4, 6, 8};
-//	test = new SegTree();
-//	test->build(J, test->root, 1, 9);
-//	test->update(test->root, 5, false, 3);
-//	test->update(test->root, 2, 10, 1);
-//	test->update(test->root, 5, 11, 1);
-//	test->printTree();
-//	putchar(10);
-//
-//	copyTest = new SegTree();
-//	copyTest->copyTree(test);
-//	copyTest->update(copyTest->root, 3, false, 3);
-//	copyTest->update(copyTest->root, 2, false, 3);
-//	copyTest->printTree();
-//	putchar(10);
-//	test->printTree();
 	return 0;
 }

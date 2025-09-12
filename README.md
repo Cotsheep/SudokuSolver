@@ -8,3 +8,9 @@ $3.$ 由于literalList中的元素在被pull out时会重置nextPal和prePal，�
 $4.$ 在pull out literal中加了一行判断：`if(!clause->inCNFList)return ;` ，导致在回溯删除添加的单子句时直接return了！  
 $5.$ 当然，`if(!liter->inCNFList)`也需要删除。  
 $6.$ 当然，pull out clause的时候也是因为在调用deleteClause的时候使用了pull out clause，所以确实它会有可能不在CNFList中。
+第 $3$ 版：
+
+第 $4$ 版：
+
+第 $5$ 版：
+$1.$ 文件操作最后要将输入流清空。

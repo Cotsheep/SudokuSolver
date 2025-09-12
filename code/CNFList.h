@@ -34,8 +34,6 @@ struct ClauseNode
     void initUnitClause(int var, bool sign);
 };
 
-#define MAXN 100005
-
 class CNFList
 {
 public:
@@ -52,10 +50,10 @@ public:
     void printCNFList();
     void printLiteralList(int var = 0);
     void addClause(ClauseNode *clause);
-    void buildCNFList(string fileName);
+    void buildCNFList(string fileName, int debug = 0);
     void DeleteClause(ClauseNode *clause);
     void DeleteLiteral(LiteralNode *literal);
-    void addToLiteralList(LiteralNode *literal);
+    void addToLiteralList(LiteralNode *literal, int copying = 0);
     void copyCNFList(const CNFList *other);// copy constructor
     void disable(ClauseNode *clause);
     void disable(LiteralNode *literal);
