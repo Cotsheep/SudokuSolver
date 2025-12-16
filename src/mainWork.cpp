@@ -1,5 +1,8 @@
 #include <time.h>
+#include <direct.h>
 #include "global.h"
+
+#define DEBUG
 
 void QfuncTest(Queue <int > &q)// attention!! the pointers in q will be the same as the original queue, so add &
 {
@@ -16,8 +19,8 @@ int main()
 	srand(time(nullptr));
 	//   freopen("D:\\code\\C\\SATsolver\\testSamples\\output.out", "w", stdout);
 	string testIn[100];
-	string fileHead = "D:\\code\\C\\SATsolver\\TEST\\";
-	string SATsolution = "D:\\code\\C\\SATsolver\\TEST\\solution.txt";
+	string fileHead = "test/";
+	string SATsolution = "test/solution.txt";
 	testIn[1] = fileHead + "1.cnf";
 	testIn[2] = fileHead + "2.cnf";
 	testIn[3] = fileHead + "3.cnf";

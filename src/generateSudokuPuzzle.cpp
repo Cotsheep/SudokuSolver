@@ -10,7 +10,7 @@ bool solveSudoku(int a[9][9], int res[9][9], int debug)
     string sudokuCNFFile = "D:\\code\\C\\SATsolver\\tempSudoku.cnf";
     sudokuToCNFFile(a, sudokuCNFFile);
     CNFList *sudokuCNF = new CNFList();
-    sudokuCNF->buildCNFList(sudokuCNFFile, debug);
+    sudokuCNF->buildCNFList(sudokuCNFFile);
     // printf("built\n");
     int ans[MAXN] = {0};
     memset(ans, 0, sizeof(ans));

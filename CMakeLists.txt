@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.10...4.1)
+
+PROJECT("SudokuSolver")
+
+SET(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_FLAGS "-Wall")
+
+file(GLOB SOURCE "src/*.cpp" "src/*.h")
+ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE})
+
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

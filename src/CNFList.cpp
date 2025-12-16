@@ -1,4 +1,5 @@
 #include "CNFList.h"
+#define DEBUG
 
 LiteralNode::LiteralNode()
 {
@@ -402,17 +403,15 @@ void CNFList::copyCNFList(const CNFList *other)// copy
     J->copyTree(other->J);
     return ;
 }
-void CNFList::buildCNFList(string fileName, int debug)
+void CNFList::buildCNFList(string fileName)
 {
     freopen(fileName.c_str(), "r", stdin);
 
-    // if(debug)
-    // {
-    //     printf("debug: ");
-    //     putchar(getchar());
-    // }
-
-    // printf("Building CNFList from %s\n", fileName.c_str());
+    #ifdef DEBUG
+        // putchar(getchar());
+        // putchar(10);
+        printf("DEBUG: Building CNFList from %s\n", fileName.c_str());
+    #endif
 
     clauseHead = NULL;
     ClauseNode *lastClause = NULL;
@@ -422,11 +421,15 @@ void CNFList::buildCNFList(string fileName, int debug)
     
     int lineCnt = 0;
 
-    // printf("Reading CNF file...\n");
-    
+    #ifdef DEBUG
+    printf("Reading CNF file...\n");
+    #endif
+
     while(getline(cin, lines))// read datas from the file
     {
-        if(debug)printf("got in");
+        #ifdef DEBUG
+        printf("got in");
+        #endif
 
         if(lines[0] == 'c') continue;
         int p = 0;
@@ -438,7 +441,9 @@ void CNFList::buildCNFList(string fileName, int debug)
             continue;
         }
 
-        if(debug)printf("Reading line %d\n", ++lineCnt);
+        #ifdef DEBUG
+        printf("Reading line %d\n", ++lineCnt);
+        #endif
         
         LiteralNode *lastLiteral = NULL;
         ClauseNode *newClause = new ClauseNode();
@@ -481,6 +486,11 @@ void CNFList::buildCNFList(string fileName, int debug)
         }
 
     }
+
+    #ifdef DEBUG
+    printf("CNFList built: %d clauses, %d variables, %d unit clauses.\n", clauseNum, varNum, unitClauseNum);
+    #endif
+
     J->build(tempJ, J->root, 1, varNum);
 
     freopen("CON", "r", stdin);
