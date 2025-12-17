@@ -1,4 +1,4 @@
-rem 自动执行bin目录下的exe文件（如果有多个exe文件，会自动执行最后找到的exe文件）
+rem Automatically execute the exe files in the bin directory (if there are multiple exe files, the last found one will be automatically executed).
 @echo off
 pushd .
 

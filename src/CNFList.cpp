@@ -1,5 +1,5 @@
 #include "CNFList.h"
-#define DEBUG
+// #define DEBUG
 
 LiteralNode::LiteralNode()
 {

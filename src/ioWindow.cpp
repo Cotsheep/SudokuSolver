@@ -9,7 +9,7 @@ void playSudoku(int a[9][9], int finalAns[9][9])
             if(a[i][j]) base[i][j] = 1;
     printf("Welcome to play Sudoku!\n");
     printf("Puzzle:\n");
-    printGrid(a);
+    printGame(a, base);
     // printGrid(base);
     int row, col, num;
     int var;
@@ -21,7 +21,7 @@ void playSudoku(int a[9][9], int finalAns[9][9])
         if(var == 0)
         {
             printf("The answer:\n");
-            printGrid(finalAns);
+            printGame(finalAns, base);
             return ;
         }
         row = var / 100;
@@ -63,10 +63,40 @@ int chooseMainMenu()
     freopen("CON", "w", stdout);
     int choice;
     printf("Menu:\n");
-    printf("1. Solve SAT problem\n");
-    printf("2. Play sudoku\n");
+    printf("1. Set sudoku puzzle\n");
+    printf("2. Play sudoku(auto generated)\n");
     printf("3. Exit\n");
     printf("Your choice: ");
     choice = chooseNum(1, 3);
     return choice;
+}
+
+void printGame(int a[9][9], int base[9][9]) 
+{
+    printf(" ");
+    for(int i = 1; i <= 9; ++i)
+    {
+        if((i - 1) % 3 == 0) printf("  ");
+        printf(" %d", i);
+    }
+    putchar(10);
+    printf("  +-------+-------+-------+\n");
+    for(int i = 0; i < 9; i++) 
+    {
+        printf("%d ", i + 1);
+        for(int j = 0; j < 9; j++) 
+        {
+            if(j % 3 == 0) printf("| ");
+            if(base[i][j]) printf("%d ", a[i][j]);
+            else 
+            {   
+                if(a[i][j] == 0) printColor(". ", "blue");
+                else printColor(to_string(a[i][j]) + " ", "green");
+            }
+        }
+        printf("|\n");
+        if((i + 1) % 3 == 0)
+            printf("  +-------+-------+-------+\n");
+    }
+    return ;
 }

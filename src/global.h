@@ -5,8 +5,6 @@
 
 //generateSudokuPuzzle
 void generateSudokuPuzzle(int a[9][9], int finalAns[9][9], int n);// generate a Sudoku puzzle which has n numbers remain and store it in a 2D array
-void printGrid(int a[9][9]);
-void printGame(int a[9][9], int base[9][9]);
 int transToVar(int row, int col, int num);
 void transToPos(int var, int &row, int &col, int &num);
 void sudokuToCNFFile(int a[9][9], string fileName);
@@ -20,6 +18,7 @@ bool DPLLLauncher(int ans[], CNFList *cnf, int &branchTime, int method = 2);// a
 bool DPLL(int ans[], CNFList *cnf, int depth, int method);
 
 //ioWindow
+void printGame(int a[9][9], int base[9][9]);
 void playSudoku(int a[9][9], int ans[9][9]);
 int chooseMainMenu();
 int chooseNum(int start, int end);
