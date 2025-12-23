@@ -13,6 +13,20 @@ void QfuncTest(Queue <int > &q)// attention!! the pointers in q will be the same
 	return ;
 }
 
+const string mainMenu[] = {
+	"Set standard sudoku puzzle",
+	"Play stored sudoku puzzle",
+	"Play sudoku(auto generated)",
+	"Exit",
+	""
+};
+
+const string sudokuFormMenu[] = {
+	"Standard Sudoku",
+	"% Sudoku",
+	""
+};
+
 int main() 
 {
 	srand(time(nullptr));
@@ -35,61 +49,33 @@ int main()
 
 	int choose;
 
-	while((choose = chooseMainMenu()) != 3)
+
+	while((choose = ChooseOptions(mainMenu)) != 4)
 	{
 		if(choose == 1)
 		{
-			// int testFileNum, method;
-			// printf("Choose a test file(1~12): ");
-			// testFileNum = chooseNum(1, 12);
-			// printf("Choose a method(1 for origin, 2 for SegTree): ");
-			// method = chooseNum(1, 2);
-			// CNFList *cnf = new CNFList(), *cnfCopy = new CNFList();
-			// cnf->buildCNFList(testIn[testFileNum]);
-			// cnfCopy->copyCNFList(cnf);
-			// int ans[MAXN] = {0};
-			// memset(ans, 0, sizeof(ans));
-			// int branchTime = 0;
-			// clock_t startTime = clock();
-			// printf("Solving...\n");
-			// freopen(SATsolution.c_str(), "w", stdout);
-			// bool flag = DPLLLauncher(ans, cnf, branchTime, method);
-			// if(flag)
-			// {
-			// 	printf("s 1\n");
-			// 	printf("v ");
-			// 	for(int i = 1; i <= cnf->varNum; ++i)
-			// 	{
-			// 		if(ans[i] == 1) printf("%d ", i);
-			// 		else if(ans[i] == -1) printf("%d ", -i);
-			// 		else printf("0 ");
-			// 	}
-			// 	putchar(10);
-			// }
-			// else
-			// {
-			// 	printf("s 0\n");
-			// }
-			// clock_t endTime = clock();
-			// int timeUsed = (int)(endTime - startTime);
-			// printf("t %d ms\n", timeUsed);
-			// printf("Branch times: %d\n", branchTime);
-			// if(flag)cnfCopy->checkSAT(ans);
-			// freopen("CON", "w", stdout);
-			// delete cnf;
-			// delete cnfCopy;
-			// printf("Solution written in %s\n", SATsolution.c_str());
+			
 		}
 		else if(choose == 2)
 		{
-			int remain;
+
+		}
+		else if(choose == 3)
+		{
+			int remain, isM;
 			int sudoku[9][9] = {0};
 			int finalAns[9][9] = {0};
+
+			isM = ChooseOptions(sudokuFormMenu) == 2 ? true : false;
+			if(isM) printf("You chose %% sudoku form.\n");
+			else printf("You chose standard sudoku form.\n");
+
 			printf("Choose the number of elements to remain\n(14~80, if less than 20, it may has multiple solutions)\nchoose: ");
 			remain = chooseNum(14, 80);
 			printf("You chose %d clues to remain.\n", remain);
-			generateSudokuPuzzle(sudoku, finalAns, remain);
-			playSudoku(sudoku, finalAns);
+			generateSudokuPuzzle(sudoku, finalAns, remain, isM);
+			playSudoku(sudoku, finalAns, isM);
+			
 		}
 	}
 

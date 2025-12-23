@@ -32,6 +32,7 @@ void Restore(CNFList *cnf, int clauseBottom, int literBottom)
 
 int newCnt;
 
+// DPLLLauncher: launch DPLL algorithm on cnf, store the result in ans[]
 bool DPLLLauncher(int ans[], CNFList *cnf, int &branchTime, int method)
 {
     clauseTop = 0;
@@ -42,6 +43,7 @@ bool DPLLLauncher(int ans[], CNFList *cnf, int &branchTime, int method)
     return flag;
 }
 
+// ans[]: 1 for true, -1 for false, 0 for unsure
 bool DPLL(int ans[], CNFList *cnf, int depth, int method)
 {
     // printf("\n\ndfs depth:%d\n", depth);

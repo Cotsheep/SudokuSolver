@@ -1,6 +1,6 @@
 #include "global.h"
 
-void playSudoku(int a[9][9], int finalAns[9][9]) 
+void playSudoku(int a[9][9], const int finalAns[9][9], bool isM) 
 {
     int base[9][9];
     memset(base, 0, sizeof(base));
@@ -40,7 +40,7 @@ void playSudoku(int a[9][9], int finalAns[9][9])
         }
         a[row - 1][col - 1] = num;
         printGame(a, base);
-        flag = checkLegal(a) == 2 ? true : false;
+        flag = checkLegal(a, isM) == 2 ? true : false;
     }
     printf("Congratulations! You win!\n");
     return ;
@@ -57,21 +57,26 @@ int chooseNum(int start, int end) // [start, end]
     return num;
 }
 
-int chooseMainMenu() 
+int ChooseOptions(const string menu[]) 
 {
     freopen("CON", "r", stdin);
     freopen("CON", "w", stdout);
-    int choice;
-    printf("Menu:\n");
-    printf("1. Set sudoku puzzle\n");
-    printf("2. Play sudoku(auto generated)\n");
-    printf("3. Exit\n");
-    printf("Your choice: ");
-    choice = chooseNum(1, 3);
+    int choice, len = 0;
+    while(menu[len] != "")++len;
+    // printf("Menu:\n");
+    // printf("1. Set sudoku puzzle\n");
+    // printf("2. Play sudoku(auto generated)\n");
+    // printf("3. Exit\n");
+    // printf("Your choice: ");
+    for(int i = 0; i < len; ++i) 
+    {
+        printf("%d. %s\n", i + 1, menu[i].c_str());
+    }
+    choice = chooseNum(1, len);
     return choice;
 }
 
-void printGame(int a[9][9], int base[9][9]) 
+void printGame(const int a[9][9], const int base[9][9]) 
 {
     printf(" ");
     for(int i = 1; i <= 9; ++i)
