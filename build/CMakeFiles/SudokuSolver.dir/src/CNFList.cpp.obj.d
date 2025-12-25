@@ -102,6 +102,75 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tuple \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/system_error \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_init_exception.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/nested_exception.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdint \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdint.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ctime \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/time.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/atomicity.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwctype \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wctype.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/streambuf \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/codecvt \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/concurrence.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_base.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocated_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/aligned_buffer.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/windows.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sdkddkver.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/excpt.h \
@@ -325,7 +394,6 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj: \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/shellapi.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winperf.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winsock.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_timeval.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_bsd_types.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/inaddr.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/psdk_inc/_socket_types.h \
@@ -372,46 +440,11 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj: \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/mcx.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/imm.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_init_exception.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/nested_exception.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ios_base.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/atomicity.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/system_error \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/streambuf \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwctype \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wctype.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/streambuf_iterator.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstring \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cmath \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/math.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/specfun.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/gamma.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/special_function_util.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/bessel_function.tcc \
@@ -424,9 +457,6 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/poly_hermite.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/poly_laguerre.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tr1/riemann_zeta.tcc \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdint \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdint.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/vector \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_uninitialized.h \
@@ -439,8 +469,4 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_numeric.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ctime \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/time.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_compat.h
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h

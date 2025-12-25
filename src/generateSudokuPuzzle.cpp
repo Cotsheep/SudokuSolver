@@ -7,6 +7,7 @@
 
 // #define DEBUG
 
+
 // return true if solved, the result is stored in res
 bool solveSudoku(int a[9][9], int res[9][9], bool isM) 
 {       
@@ -17,7 +18,7 @@ bool solveSudoku(int a[9][9], int res[9][9], bool isM)
         #endif
         return false;
     }
-    string sudokuCNFFile = "temp/tempSudoku.cnf";
+    string sudokuCNFFile = gRootPath + "/temp/tempSudoku.cnf";
     SudokuToCNFFile(a, sudokuCNFFile, isM);
     CNFList *sudokuCNF = new CNFList();
     sudokuCNF->buildCNFList(sudokuCNFFile);

@@ -1,7 +1,10 @@
 #include <time.h>
 #include "global.h"
+#include <iostream>
 
 // #define DEBUG
+
+string gRootPath = GetRootPath();
 
 void QfuncTest(Queue <int > &q)// attention!! the pointers in q will be the same as the original queue, so add &
 {
@@ -29,7 +32,9 @@ const string sudokuFormMenu[] = {
 
 int main() 
 {
+	
 	srand(time(nullptr));
+	// std::cout << fs::current_path() << std::endl;
 	//   freopen("D:\\code\\C\\SATsolver\\testSamples\\output.out", "w", stdout);
 	// string testIn[100];
 	// string fileHead = "test/";

@@ -1390,6 +1390,7 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward/binders.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bit \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/alloc_traits.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocated_ptr.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_ios.tcc \
@@ -1397,6 +1398,8 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/concept_check.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_forced.h \
@@ -1404,6 +1407,10 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
@@ -1412,8 +1419,11 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/istream.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_classes.tcc \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets.tcc \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
@@ -1423,15 +1433,20 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/predefined_ops.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ptr_traits.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/random.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/range_access.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/refwrap.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_base.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/specfun.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_algobase.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_bvector.h \
@@ -1449,6 +1464,7 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uniform_int_dist.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/utility.h \
@@ -1458,6 +1474,7 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cmath \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/codecvt \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/concepts \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstddef \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdint \
@@ -1470,17 +1487,22 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/assertions.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/debug/debug.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/aligned_buffer.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/alloc_traits.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/atomicity.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/concurrence.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/numeric_traits.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/type_traits.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/initializer_list \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/istream \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ostream \
@@ -1488,6 +1510,8 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/streambuf \
@@ -1520,8 +1544,10 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolv
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/cetintrin.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/cldemoteintrin.h \
   D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/clflushoptintrin.h \
@@ -2707,6 +2733,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/amxint8intrin.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avxvnniint8intrin.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio:
+
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cmath:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512convertintrin.h:
@@ -2738,6 +2766,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512bitalgvlint
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/oleidl.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx10_2-512minmaxintrin.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/avx512vp2intersectintrin.h:
 
@@ -2991,6 +3021,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ctime:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/random:
@@ -3004,6 +3036,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/psdk_inc/_ip_types.h:
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/vector.tcc:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/codecvt.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/psdk_inc/_wsa_errnos.h:
 
@@ -3061,6 +3095,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/dpapi.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/datetimeapi.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw.h:
@@ -3078,6 +3114,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ios:
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iostream:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_ops.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
@@ -3167,6 +3205,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/cldemoteintrin.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/clflushoptintrin.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stringapiset.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/clwbintrin.h:
@@ -3220,6 +3260,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm3dnow.h:
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mmintrin.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/unique_ptr.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/movdirintrin.h:
 
@@ -3283,6 +3325,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/vpclmulqdqintrin.
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/waitpkgintrin.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/aligned_buffer.h:
+
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86gprintrin.h:
 
 D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/x86intrin.h:
@@ -3301,6 +3345,8 @@ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/xsavesintrin.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_bsd_types.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.h:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winuser.h:
@@ -3314,6 +3360,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_timeval.h:
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/apiset.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/basetsd.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/bcrypt.h:
 
@@ -3383,6 +3431,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/jobapi.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/joystickapi.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_conv.h:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sysinfoapi.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/ktmtypes.h:
@@ -3435,6 +3485,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/poppack.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/processthreadsapi.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/codecvt:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/profileapi.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wnnc.h:
@@ -3479,7 +3531,11 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sal.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr.h:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/sstream.tcc:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/stralign_s.h:
 
@@ -3517,6 +3573,8 @@ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winapifamily.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wincrypt.h:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocated_ptr.h:
+
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winefs.h:
 
 D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/winerror.h:
@@ -3545,8 +3603,28 @@ D:/code/C++Projects/SudokuSolver/src/CNFList.h:
 
 D:/code/C++Projects/SudokuSolver/src/generateSudokuPuzzle.cpp:
 
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_base.h:
+
 D:/code/C++Projects/SudokuSolver/src/global.h:
 
 D:/code/C++Projects/SudokuSolver/src/ioWindow.cpp:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/chrono.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/locale_facets_nonio.tcc:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_dir.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/quoted_string.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/concurrence.h:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iomanip:
+
+D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/sstream:
 
 D:/code/C++Projects/SudokuSolver/src/tools.cpp:

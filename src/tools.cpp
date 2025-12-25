@@ -1,5 +1,6 @@
 #include "tools.h"
 #include <cstdlib>
+namespace fs = std::filesystem;
 
 int readInt() 
 {
@@ -59,6 +60,26 @@ void printColor(string s, string color)
     std::cout << s;
     SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
     return ;
+}
+
+// Function to get the directory of the executable
+string getExePath() {
+    char buffer[MAX_PATH];
+    // get the exe path like C:\Project\build\myapp.exe
+    GetModuleFileNameA(NULL, buffer, MAX_PATH);
+    string fullPath(buffer);
+
+    // find the last "\" or "/" and extract the directory part
+    size_t pos = fullPath.find_last_of("\\/");
+    return fullPath.substr(0, pos);
+}
+
+string GetRootPath() {
+    string exePath = getExePath();
+    fs::path p(exePath);
+    // Assuming the executable is in a subdirectory of the root project directory
+    fs::path rootPath = p.parent_path(); 
+    return rootPath.string();
 }
 
 SegTree::TreeNode::TreeNode()

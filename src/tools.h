@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <stdio.h>
+#include <filesystem>
 #include <windows.h>
 #include <iostream>
 #include <cstring>
@@ -9,12 +10,15 @@
 using namespace std;
 #define MAXN 10005
 
+extern string gRootPath; // global root path of the project
 int readInt();
 int readInt(string s, int &p);
 char readChar();
 void Swap(int &a, int &b);
 void shuffle(int a[], int n);// 0 ~ n-1
 void printColor(string s, string color);
+string getExePath();
+string GetRootPath();
 
 template<typename T>
 class Queue// a simple queue by myself
