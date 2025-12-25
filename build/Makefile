@@ -255,6 +255,30 @@ src/solveSAT.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.s
 .PHONY : src/solveSAT.cpp.s
 
+src/solveSudoku.obj: src/solveSudoku.cpp.obj
+.PHONY : src/solveSudoku.obj
+
+# target to build an object file
+src/solveSudoku.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj
+.PHONY : src/solveSudoku.cpp.obj
+
+src/solveSudoku.i: src/solveSudoku.cpp.i
+.PHONY : src/solveSudoku.i
+
+# target to preprocess a source file
+src/solveSudoku.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.i
+.PHONY : src/solveSudoku.cpp.i
+
+src/solveSudoku.s: src/solveSudoku.cpp.s
+.PHONY : src/solveSudoku.s
+
+# target to generate assembly for a file
+src/solveSudoku.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.s
+.PHONY : src/solveSudoku.cpp.s
+
 src/tools.obj: src/tools.cpp.obj
 .PHONY : src/tools.obj
 
@@ -304,6 +328,9 @@ help:
 	@echo ... src/solveSAT.obj
 	@echo ... src/solveSAT.i
 	@echo ... src/solveSAT.s
+	@echo ... src/solveSudoku.obj
+	@echo ... src/solveSudoku.i
+	@echo ... src/solveSudoku.s
 	@echo ... src/tools.obj
 	@echo ... src/tools.i
 	@echo ... src/tools.s

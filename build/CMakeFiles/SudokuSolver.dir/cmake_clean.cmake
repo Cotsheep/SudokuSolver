@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj.d"
   "CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj"
   "CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj.d"
+  "CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj"
+  "CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj.d"
   "CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj"
   "CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj.d"
   "D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe"

@@ -84,12 +84,12 @@ clean: CMakeFiles/SudokuSolver.dir/clean
 CMakeFiles/SudokuSolver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target SudokuSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SudokuSolver"
 .PHONY : CMakeFiles/SudokuSolver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SudokuSolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\C++Projects\SudokuSolver\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\C++Projects\SudokuSolver\build\CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/SudokuSolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\code\C++Projects\SudokuSolver\build\CMakeFiles 0
 .PHONY : CMakeFiles/SudokuSolver.dir/rule
@@ -101,7 +101,7 @@ SudokuSolver: CMakeFiles/SudokuSolver.dir/rule
 # codegen rule for target.
 CMakeFiles/SudokuSolver.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Finished codegen for target SudokuSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target SudokuSolver"
 .PHONY : CMakeFiles/SudokuSolver.dir/codegen
 
 # clean rule for target.
