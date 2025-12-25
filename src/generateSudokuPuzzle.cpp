@@ -1,4 +1,4 @@
-#include "global.h"
+#include "generateSudokuPuzzle.h"
 
 // #define DEBUG
 

@@ -1,4 +1,4 @@
-#include "global.h"
+#include "ioWindow.h"
 
 void playSudoku(int a[9][9], const int finalAns[9][9], bool isM) 
 {

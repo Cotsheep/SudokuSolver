@@ -470,4 +470,7 @@ CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_numeric.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
+ D:\code\C++Projects\SudokuSolver\src\generateSudokuPuzzle.h \
+ D:\code\C++Projects\SudokuSolver\src\solveSAT.h \
+ D:\code\C++Projects\SudokuSolver\src\ioWindow.h

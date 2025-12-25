@@ -54,7 +54,6 @@ int main()
 
 	int choose;
 
-
 	while((choose = ChooseOptions(mainMenu)) != 4)
 	{
 		if(choose == 1)
