@@ -403,7 +403,7 @@ void CNFList::copyCNFList(const CNFList *other)// copy
     J->copyTree(other->J);
     return ;
 }
-void CNFList::buildCNFList(string fileName)
+void CNFList::buildCNFList(std::string fileName)
 {
     freopen(fileName.c_str(), "r", stdin);
 
@@ -416,7 +416,7 @@ void CNFList::buildCNFList(string fileName)
     clauseHead = NULL;
     ClauseNode *lastClause = NULL;
     
-    string lines;
+    std::string lines;
     int tempJ[MAXN];for(int i = 0; i < MAXN; ++i) tempJ[i] = 0;
     
     int lineCnt = 0;
@@ -425,7 +425,7 @@ void CNFList::buildCNFList(string fileName)
     printf("Reading CNF file...\n");
     #endif
 
-    while(getline(cin, lines))// read datas from the file
+    while(std::getline(std::cin, lines))// read datas from the file
     {
         #ifdef DEBUG
         printf("got in");
@@ -494,7 +494,7 @@ void CNFList::buildCNFList(string fileName)
     J->build(tempJ, J->root, 1, varNum);
 
     freopen("CON", "r", stdin);
-    cin.clear();
+    std::cin.clear();
     return ;
 }
 void CNFList::printCNFList()

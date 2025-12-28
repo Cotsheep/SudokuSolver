@@ -1,6 +1,6 @@
 #include <time.h>
 #include "global.h"
-#include <iostream>
+using namespace std;
 
 // #define DEBUG
 
@@ -74,12 +74,11 @@ int main()
 			if(isM) printf("You chose %% sudoku form.\n");
 			else printf("You chose standard sudoku form.\n");
 
-			printf("Choose the number of elements to remain\n(14~80, if less than 20, it may has multiple solutions)\nchoose: ");
-			remain = chooseNum(14, 80);
+			printf("Choose the number of elements to remain\n(20~80)\nchoose: ");
+			remain = chooseNum(20, 80);
 			printf("You chose %d clues to remain.\n", remain);
-			generateSudokuPuzzle(sudoku, finalAns, remain, isM);
-			playSudoku(sudoku, finalAns, isM);
-			
+			unique_ptr<Sudoku> puzzle(new Sudoku(remain, isM));
+			puzzle->Play();
 		}
 	}
 

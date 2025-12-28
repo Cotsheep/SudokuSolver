@@ -50,7 +50,7 @@ public:
     void printCNFList();
     void printLiteralList(int var = 0);
     void addClause(ClauseNode *clause);
-    void buildCNFList(string fileName);
+    void buildCNFList(std::string fileName);
     void DeleteClause(ClauseNode *clause);
     void DeleteLiteral(LiteralNode *literal);
     void addToLiteralList(LiteralNode *literal, int copying = 0);

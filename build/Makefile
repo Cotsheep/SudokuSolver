@@ -159,54 +159,6 @@ src/CNFList.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.s
 .PHONY : src/CNFList.cpp.s
 
-src/generateSudokuPuzzle.obj: src/generateSudokuPuzzle.cpp.obj
-.PHONY : src/generateSudokuPuzzle.obj
-
-# target to build an object file
-src/generateSudokuPuzzle.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj
-.PHONY : src/generateSudokuPuzzle.cpp.obj
-
-src/generateSudokuPuzzle.i: src/generateSudokuPuzzle.cpp.i
-.PHONY : src/generateSudokuPuzzle.i
-
-# target to preprocess a source file
-src/generateSudokuPuzzle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.i
-.PHONY : src/generateSudokuPuzzle.cpp.i
-
-src/generateSudokuPuzzle.s: src/generateSudokuPuzzle.cpp.s
-.PHONY : src/generateSudokuPuzzle.s
-
-# target to generate assembly for a file
-src/generateSudokuPuzzle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.s
-.PHONY : src/generateSudokuPuzzle.cpp.s
-
-src/ioWindow.obj: src/ioWindow.cpp.obj
-.PHONY : src/ioWindow.obj
-
-# target to build an object file
-src/ioWindow.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj
-.PHONY : src/ioWindow.cpp.obj
-
-src/ioWindow.i: src/ioWindow.cpp.i
-.PHONY : src/ioWindow.i
-
-# target to preprocess a source file
-src/ioWindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.i
-.PHONY : src/ioWindow.cpp.i
-
-src/ioWindow.s: src/ioWindow.cpp.s
-.PHONY : src/ioWindow.s
-
-# target to generate assembly for a file
-src/ioWindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.s
-.PHONY : src/ioWindow.cpp.s
-
 src/mainWork.obj: src/mainWork.cpp.obj
 .PHONY : src/mainWork.obj
 
@@ -230,6 +182,30 @@ src/mainWork.s: src/mainWork.cpp.s
 src/mainWork.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.s
 .PHONY : src/mainWork.cpp.s
+
+src/segmentTree.obj: src/segmentTree.cpp.obj
+.PHONY : src/segmentTree.obj
+
+# target to build an object file
+src/segmentTree.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj
+.PHONY : src/segmentTree.cpp.obj
+
+src/segmentTree.i: src/segmentTree.cpp.i
+.PHONY : src/segmentTree.i
+
+# target to preprocess a source file
+src/segmentTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.i
+.PHONY : src/segmentTree.cpp.i
+
+src/segmentTree.s: src/segmentTree.cpp.s
+.PHONY : src/segmentTree.s
+
+# target to generate assembly for a file
+src/segmentTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.s
+.PHONY : src/segmentTree.cpp.s
 
 src/solveSAT.obj: src/solveSAT.cpp.obj
 .PHONY : src/solveSAT.obj
@@ -255,29 +231,29 @@ src/solveSAT.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.s
 .PHONY : src/solveSAT.cpp.s
 
-src/solveSudoku.obj: src/solveSudoku.cpp.obj
-.PHONY : src/solveSudoku.obj
+src/sudoku.obj: src/sudoku.cpp.obj
+.PHONY : src/sudoku.obj
 
 # target to build an object file
-src/solveSudoku.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj
-.PHONY : src/solveSudoku.cpp.obj
+src/sudoku.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj
+.PHONY : src/sudoku.cpp.obj
 
-src/solveSudoku.i: src/solveSudoku.cpp.i
-.PHONY : src/solveSudoku.i
+src/sudoku.i: src/sudoku.cpp.i
+.PHONY : src/sudoku.i
 
 # target to preprocess a source file
-src/solveSudoku.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.i
-.PHONY : src/solveSudoku.cpp.i
+src/sudoku.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.i
+.PHONY : src/sudoku.cpp.i
 
-src/solveSudoku.s: src/solveSudoku.cpp.s
-.PHONY : src/solveSudoku.s
+src/sudoku.s: src/sudoku.cpp.s
+.PHONY : src/sudoku.s
 
 # target to generate assembly for a file
-src/solveSudoku.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.s
-.PHONY : src/solveSudoku.cpp.s
+src/sudoku.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\SudokuSolver.dir\build.make CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.s
+.PHONY : src/sudoku.cpp.s
 
 src/tools.obj: src/tools.cpp.obj
 .PHONY : src/tools.obj
@@ -316,21 +292,18 @@ help:
 	@echo ... src/CNFList.obj
 	@echo ... src/CNFList.i
 	@echo ... src/CNFList.s
-	@echo ... src/generateSudokuPuzzle.obj
-	@echo ... src/generateSudokuPuzzle.i
-	@echo ... src/generateSudokuPuzzle.s
-	@echo ... src/ioWindow.obj
-	@echo ... src/ioWindow.i
-	@echo ... src/ioWindow.s
 	@echo ... src/mainWork.obj
 	@echo ... src/mainWork.i
 	@echo ... src/mainWork.s
+	@echo ... src/segmentTree.obj
+	@echo ... src/segmentTree.i
+	@echo ... src/segmentTree.s
 	@echo ... src/solveSAT.obj
 	@echo ... src/solveSAT.i
 	@echo ... src/solveSAT.s
-	@echo ... src/solveSudoku.obj
-	@echo ... src/solveSudoku.i
-	@echo ... src/solveSudoku.s
+	@echo ... src/sudoku.obj
+	@echo ... src/sudoku.i
+	@echo ... src/sudoku.s
 	@echo ... src/tools.obj
 	@echo ... src/tools.i
 	@echo ... src/tools.s

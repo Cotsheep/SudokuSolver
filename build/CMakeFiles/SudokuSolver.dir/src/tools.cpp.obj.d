@@ -1,50 +1,67 @@
 CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: \
  D:\code\C++Projects\SudokuSolver\src\tools.cpp \
  D:\code\C++Projects\SudokuSolver\src\tools.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/string \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwchar \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wchar.h \
+ D:\code\C++Projects\SudokuSolver\src\segmentTree.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/vadefs.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+ D:\code\C++Projects\SudokuSolver\src\myQueue.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/requires_hosted.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/pstl_config.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/version.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/system_error \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/errno.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/postypes.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cwchar \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/wchar.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_wctype.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_init_exception.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stddef.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/move.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/type_traits \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/version.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/nested_exception.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/string \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/char_traits.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/allocator.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/new_allocator.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/new \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functexcept.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_defines.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/move.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cpp_type_traits.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/localefwd.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/clocale \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/locale.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdio.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cctype \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/ctype.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/ostream_insert.h \
@@ -76,7 +93,6 @@ CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_construct.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/string_view \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/functional_hash.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/hash_bytes.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/string_view.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ext/string_conversions.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdlib \
@@ -88,29 +104,15 @@ CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdlib.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/malloc.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/mm_malloc.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/errno.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/std_abs.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdio \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/charconv.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/basic_string.tcc \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memory_resource.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstddef \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stddef.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stddef.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/uses_allocator_args.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/tuple \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/filesystem \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_fwd.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/system_error \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/stdexcept \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/exception \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/exception_ptr.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/cxxabi_init_exception.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/typeinfo \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/nested_exception.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cstdint \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdint.h \
@@ -468,4 +470,13 @@ CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/numeric \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_numeric.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_numeric_defs.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/execution_defs.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/memory \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_tempbuf.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stl_raw_storage_iter.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/align.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/shared_ptr_atomic.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward/auto_ptr.h \
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h

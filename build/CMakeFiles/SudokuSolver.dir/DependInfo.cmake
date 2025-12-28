@@ -9,11 +9,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/code/C++Projects/SudokuSolver/src/CNFList.cpp" "CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj.d"
-  "D:/code/C++Projects/SudokuSolver/src/generateSudokuPuzzle.cpp" "CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj.d"
-  "D:/code/C++Projects/SudokuSolver/src/ioWindow.cpp" "CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj.d"
   "D:/code/C++Projects/SudokuSolver/src/mainWork.cpp" "CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj.d"
+  "D:/code/C++Projects/SudokuSolver/src/segmentTree.cpp" "CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj.d"
   "D:/code/C++Projects/SudokuSolver/src/solveSAT.cpp" "CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj.d"
-  "D:/code/C++Projects/SudokuSolver/src/solveSudoku.cpp" "CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj.d"
+  "D:/code/C++Projects/SudokuSolver/src/sudoku.cpp" "CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj.d"
   "D:/code/C++Projects/SudokuSolver/src/tools.cpp" "CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj" "gcc" "CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj.d"
   )
 

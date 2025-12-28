@@ -85,38 +85,10 @@ CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.s"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\CNFList.cpp -o CMakeFiles\SudokuSolver.dir\src\CNFList.cpp.s
 
-CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
-CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj: D:/code/C++Projects/SudokuSolver/src/generateSudokuPuzzle.cpp
-CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\generateSudokuPuzzle.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\generateSudokuPuzzle.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\generateSudokuPuzzle.cpp
-
-CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.i"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\C++Projects\SudokuSolver\src\generateSudokuPuzzle.cpp > CMakeFiles\SudokuSolver.dir\src\generateSudokuPuzzle.cpp.i
-
-CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.s"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\generateSudokuPuzzle.cpp -o CMakeFiles\SudokuSolver.dir\src\generateSudokuPuzzle.cpp.s
-
-CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
-CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj: D:/code/C++Projects/SudokuSolver/src/ioWindow.cpp
-CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\ioWindow.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\ioWindow.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\ioWindow.cpp
-
-CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.i"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\C++Projects\SudokuSolver\src\ioWindow.cpp > CMakeFiles\SudokuSolver.dir\src\ioWindow.cpp.i
-
-CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.s"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\ioWindow.cpp -o CMakeFiles\SudokuSolver.dir\src\ioWindow.cpp.s
-
 CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
 CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: D:/code/C++Projects/SudokuSolver/src/mainWork.cpp
 CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\mainWork.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\mainWork.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\mainWork.cpp
 
 CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.i: cmake_force
@@ -127,10 +99,24 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.s"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\mainWork.cpp -o CMakeFiles\SudokuSolver.dir\src\mainWork.cpp.s
 
+CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
+CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj: D:/code/C++Projects/SudokuSolver/src/segmentTree.cpp
+CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\segmentTree.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\segmentTree.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\segmentTree.cpp
+
+CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.i"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\C++Projects\SudokuSolver\src\segmentTree.cpp > CMakeFiles\SudokuSolver.dir\src\segmentTree.cpp.i
+
+CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.s"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\segmentTree.cpp -o CMakeFiles\SudokuSolver.dir\src\segmentTree.cpp.s
+
 CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
 CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj: D:/code/C++Projects/SudokuSolver/src/solveSAT.cpp
 CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\solveSAT.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\solveSAT.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\solveSAT.cpp
 
 CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.i: cmake_force
@@ -141,24 +127,24 @@ CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.s"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\solveSAT.cpp -o CMakeFiles\SudokuSolver.dir\src\solveSAT.cpp.s
 
-CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
-CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj: D:/code/C++Projects/SudokuSolver/src/solveSudoku.cpp
-CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\solveSudoku.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\solveSudoku.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\solveSudoku.cpp
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj: D:/code/C++Projects/SudokuSolver/src/sudoku.cpp
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\sudoku.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\sudoku.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\sudoku.cpp
 
-CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.i"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\C++Projects\SudokuSolver\src\solveSudoku.cpp > CMakeFiles\SudokuSolver.dir\src\solveSudoku.cpp.i
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.i"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\code\C++Projects\SudokuSolver\src\sudoku.cpp > CMakeFiles\SudokuSolver.dir\src\sudoku.cpp.i
 
-CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.s"
-	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\solveSudoku.cpp -o CMakeFiles\SudokuSolver.dir\src\solveSudoku.cpp.s
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.s"
+	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\code\C++Projects\SudokuSolver\src\sudoku.cpp -o CMakeFiles\SudokuSolver.dir\src\sudoku.cpp.s
 
 CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: CMakeFiles/SudokuSolver.dir/flags.make
 CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: D:/code/C++Projects/SudokuSolver/src/tools.cpp
 CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj: CMakeFiles/SudokuSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj"
 	D:\app\MinGW\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj -MF CMakeFiles\SudokuSolver.dir\src\tools.cpp.obj.d -o CMakeFiles\SudokuSolver.dir\src\tools.cpp.obj -c D:\code\C++Projects\SudokuSolver\src\tools.cpp
 
 CMakeFiles/SudokuSolver.dir/src/tools.cpp.i: cmake_force
@@ -172,28 +158,26 @@ CMakeFiles/SudokuSolver.dir/src/tools.cpp.s: cmake_force
 # Object files for target SudokuSolver
 SudokuSolver_OBJECTS = \
 "CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj" \
-"CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj" \
-"CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj" \
 "CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj" \
+"CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj" \
 "CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj" \
-"CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj" \
+"CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj" \
 "CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj"
 
 # External object files for target SudokuSolver
 SudokuSolver_EXTERNAL_OBJECTS =
 
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/CNFList.cpp.obj
-D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/generateSudokuPuzzle.cpp.obj
-D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/ioWindow.cpp.obj
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj
+D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/segmentTree.cpp.obj
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/solveSAT.cpp.obj
-D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/solveSudoku.cpp.obj
+D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/src/tools.cpp.obj
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/build.make
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/linkLibs.rsp
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/objects1.rsp
 D:/code/C++Projects/SudokuSolver/bin/SudokuSolver.exe: CMakeFiles/SudokuSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable D:\code\C++Projects\SudokuSolver\bin\SudokuSolver.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\code\C++Projects\SudokuSolver\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable D:\code\C++Projects\SudokuSolver\bin\SudokuSolver.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\SudokuSolver.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

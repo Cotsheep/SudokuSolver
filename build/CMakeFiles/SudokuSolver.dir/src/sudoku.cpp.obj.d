@@ -1,24 +1,18 @@
-CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: \
- D:\code\C++Projects\SudokuSolver\src\mainWork.cpp \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/time.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
+CMakeFiles/SudokuSolver.dir/src/sudoku.cpp.obj: \
+ D:\code\C++Projects\SudokuSolver\src\sudoku.cpp \
+ D:\code\C++Projects\SudokuSolver\src\sudoku.h \
+ D:\code\C++Projects\SudokuSolver\src\solveSAT.h \
+ D:\code\C++Projects\SudokuSolver\src\CNFList.h \
+ D:\code\C++Projects\SudokuSolver\src\tools.h \
+ D:\code\C++Projects\SudokuSolver\src\segmentTree.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdio.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/vadefs.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_timeval.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
- D:\code\C++Projects\SudokuSolver\src\global.h \
- D:\code\C++Projects\SudokuSolver\src\CNFList.h \
- D:\code\C++Projects\SudokuSolver\src\tools.h \
- D:\code\C++Projects\SudokuSolver\src\segmentTree.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/stdio.h \
- D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
@@ -35,6 +29,7 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/cerrno \
  D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/errno.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/iosfwd \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/stringfwd.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/memoryfwd.h \
@@ -128,6 +123,12 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ratio \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/limits \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/ctime \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/time.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ D:/app/MinGW/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/parse_numbers.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/fs_path.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/locale \
@@ -481,6 +482,4 @@ CMakeFiles/SudokuSolver.dir/src/mainWork.cpp.obj: \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_base.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/bits/atomic_lockfree_defines.h \
  D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/backward/auto_ptr.h \
- D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h \
- D:\code\C++Projects\SudokuSolver\src\solveSAT.h \
- D:\code\C++Projects\SudokuSolver\src\sudoku.h
+ D:/app/MinGW/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/c++/pstl/glue_memory_defs.h
