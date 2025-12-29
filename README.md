@@ -1,4 +1,5 @@
 # 说明：
+直接运行bin文件夹中的exe文件
 目前只能在Windows环境下运行  
 运行时请不要改变exe文件和temp、restore文件夹的相对位置
 

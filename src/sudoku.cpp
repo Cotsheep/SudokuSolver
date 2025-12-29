@@ -1,6 +1,6 @@
 #include "sudoku.h"
 
-#define DEBUG
+// #define DEBUG
 #define MAX_ATTEMPT 1000
 #define MAX_CLAUSE_NUM 100000
 
