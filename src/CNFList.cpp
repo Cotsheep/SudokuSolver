@@ -486,6 +486,7 @@ void CNFList::buildCNFList(std::string fileName)
         }
 
     }
+    std::cin.clear(); // clear eof flag
 
     #ifdef DEBUG
     printf("CNFList built: %d clauses, %d variables, %d unit clauses.\n", clauseNum, varNum, unitClauseNum);

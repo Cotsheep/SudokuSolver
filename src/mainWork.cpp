@@ -64,7 +64,25 @@ int main()
 		}
 		else if(choose == 2)
 		{
-
+			const string puzzleFile = gRootPath + "\\restore\\Puzzles.txt";
+			vector<unique_ptr<Sudoku>> storedPuzzles = LoadPuzzles(puzzleFile);
+			if(storedPuzzles.size() == 0)
+			{
+				printf("No stored puzzles found! Please set puzzles first!\n");
+				continue ;
+			}
+			printf("Loaded %d puzzles from file.\n", (int)storedPuzzles.size());
+			for(int i = 1; i <= (int)storedPuzzles.size(); ++i)
+			{
+				printColor(to_string(i) + ". ", "yellow");
+				printf("%s sudoku puzzle\n", storedPuzzles[i - 1]->isM ? "%" : "Standard");
+				storedPuzzles[i - 1]->PrintGrid();
+				putchar(10);
+			}
+			printf("Choose a puzzle to play (1 ~ %d), (enter 0 to return to main menu): ", (int)storedPuzzles.size());
+			int puzzleNum = chooseNum(0, (int)storedPuzzles.size());
+			if(puzzleNum == 0) continue ;
+			storedPuzzles[puzzleNum - 1]->Play();
 		}
 		else if(choose == 3)
 		{

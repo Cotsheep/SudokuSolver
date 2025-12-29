@@ -1,5 +1,6 @@
 #include "sudoku.h"
 
+#define DEBUG
 #define MAX_ATTEMPT 1000
 #define MAX_CLAUSE_NUM 100000
 
@@ -262,6 +263,27 @@ void Sudoku::ReadRes(const int ans[], int _target[9][9])
     return ;
 }
 
+// read puzzle from a string of length 81 + 81 + 1
+void Sudoku::ReadPuzzle(string puzzleStr)
+{
+    Clear();
+    canBePlayed = true;
+    int p = 0;
+    isM = readInt(puzzleStr, p) == 1 ? true : false;
+    for(int i = 0; i < 9; ++i)
+        for(int j = 0; j < 9; ++j)
+        {
+            grid[i][j] = base[i][j] = readInt(puzzleStr, p);
+            if(base[i][j] != 0) remainNum++;
+        }
+    for(int i = 0; i < 9; ++i)
+        for(int j = 0; j < 9; ++j)
+        {
+            finalAns[i][j] = readInt(puzzleStr, p);
+        }
+    return ;
+}
+
 void Sudoku::Play()
 {
     if(!canBePlayed)
@@ -381,6 +403,12 @@ void Sudoku::PrintGame(const int a[9][9], const int _base[9][9], int x, int y)
         if((i + 1) % 3 == 0)
             printf("  +-------+-------+-------+\n");
     }
+    return ;
+}
+
+void Sudoku::PrintGrid() const
+{
+    PrintGame(grid, grid);
     return ;
 }
 
@@ -625,25 +653,51 @@ void Sudoku::SetPuzzle()
     }
     return ;
 }
-
-// the first line is isM (1 for %, 0 for standard)
-// the following 729 numbers(0/1) are the puzzle grid, which can be read by ReadRes()
+// for each there are one line to describe a puzzle in the saved puzzle file:
+// the first number of the first line is isM (1 for %, 0 for standard)
+// the following 81 numbers are the puzzle grid
+// and other following 81 numbers are the final answer in the same format
 void Sudoku::SavePuzzle(const string fileName) const
 {
     freopen(fileName.c_str(), "a", stdout);
-    static bool bin[730];
-    memset(bin, 0, sizeof(bin));
     printf("%d ", isM ? 1 : 0);
     for(int i = 0; i < 9; ++i)
         for(int j = 0; j < 9; ++j)
-            if(base[i][j])
-                bin[TransToVar(i + 1, j + 1, base[i][j])] = 1;
-            
-    for(int var = 1; var <= 729; ++var)
-        printf("%d ", bin[var]);
+            printf("%d ", grid[i][j]);
+
+    for(int i = 0; i < 9; ++i)
+        for(int j = 0; j < 9; ++j)
+            printf("%d ", finalAns[i][j]);
+
     printf("\n");
+
     freopen("CON", "w", stdout);
     return ;
 }
+
+vector<unique_ptr<Sudoku>> LoadPuzzles(const string fileName)
+{
+    vector<unique_ptr<Sudoku>> puzzles;
+    freopen(fileName.c_str(), "r", stdin);
+    string line;
+
+    #ifdef DEBUG
+    printf("Loading puzzles from file: %s\n", fileName.c_str());
+    #endif
+
+    while(getline(cin, line))
+    {
+        #ifdef DEBUG
+        printf("Loading puzzle: %s\n", line.c_str());
+        #endif
+        
+        puzzles.push_back(make_unique<Sudoku>());
+        puzzles.back()->ReadPuzzle(line);
+    }
+    cin.clear(); // clear eof flag
+    freopen("CON", "r", stdin);
+    return puzzles;
+}
+
 
 

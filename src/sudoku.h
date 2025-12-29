@@ -33,10 +33,14 @@ public:
     static int CheckLegal(const int a[9][9], bool isM);
     static bool CheckComplete(const int a[9][9]);
     static void ReadRes(const int ans[], int _finalAns[9][9]);
+    void ReadPuzzle(string puzzleStr);
     void Play();
     static void PrintGame(const int a[9][9], const int _base[9][9], int x = 0, int y = 0);
+    void PrintGrid() const;
     void PrintAns() const;
     void GenerateSudokuPuzzle(int _remain, bool _isM);
     void SetPuzzle();
     void SavePuzzle(const string fileName) const;
 };
+
+vector<unique_ptr<Sudoku>> LoadPuzzles(const string fileName);
