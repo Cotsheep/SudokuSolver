@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.10...4.1)
 PROJECT("SudokuSolver")
 
 SET(CMAKE_CXX_STANDARD 17)
-SET(CMAKE_CXX_FLAGS "-Wall")
+SET(CMAKE_CXX_FLAGS "-static-libgcc -static-libstdc++ -Wall")
 
 file(GLOB SOURCE "src/*.cpp" "src/*.h")
 ADD_EXECUTABLE(${PROJECT_NAME} ${SOURCE})
