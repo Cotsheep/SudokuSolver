@@ -17,7 +17,7 @@ void QfuncTest(Queue <int > &q)// attention!! the pointers in q will be the same
 }
 
 const string mainMenu[] = {
-	"Set standard sudoku puzzle",
+	"Set sudoku puzzle",
 	"Play stored sudoku puzzle",
 	"Play sudoku(auto generated)",
 	"Exit",
@@ -27,6 +27,7 @@ const string mainMenu[] = {
 const string sudokuFormMenu[] = {
 	"Standard Sudoku",
 	"% Sudoku",
+	"Back to main menu",
 	""
 };
 
@@ -58,7 +59,8 @@ int main()
 	{
 		if(choose == 1)
 		{
-			
+			unique_ptr<Sudoku> puzzle(new Sudoku());
+			puzzle->SetPuzzle();
 		}
 		else if(choose == 2)
 		{
@@ -67,10 +69,9 @@ int main()
 		else if(choose == 3)
 		{
 			int remain, isM;
-			int sudoku[9][9] = {0};
-			int finalAns[9][9] = {0};
-
-			isM = ChooseOptions(sudokuFormMenu) == 2 ? true : false;
+			choose = ChooseOptions(sudokuFormMenu);
+			if(choose == 3) continue;
+			isM = choose == 2 ? true : false;
 			if(isM) printf("You chose %% sudoku form.\n");
 			else printf("You chose standard sudoku form.\n");
 

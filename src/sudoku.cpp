@@ -3,12 +3,27 @@
 #define MAX_ATTEMPT 1000
 #define MAX_CLAUSE_NUM 100000
 
+Sudoku::Sudoku()
+{
+    Clear();
+}
+
 Sudoku::Sudoku(int _remain, bool _isM)
 {
     remainNum = _remain;
     isM = _isM;
     GenerateSudokuPuzzle(_remain, _isM);
     canBePlayed = true;
+}
+
+void Sudoku::Clear()
+{
+    memset(grid, 0, sizeof(grid));
+    memset(finalAns, 0, sizeof(finalAns));
+    memset(base, 0, sizeof(base));
+    remainNum = 0;
+    isM = false;
+    canBePlayed = false;
 }
 
 // solve the sudoku puzzle stored in _a[][]
@@ -125,13 +140,13 @@ int Sudoku::CheckLegal(const int a[9][9], bool _isM)
 
 // row and col start from 1.
 // All possible situations are mapped to the numbers 1 to 729
-int Sudoku::transToVar(int row, int col, int num)
+int Sudoku::TransToVar(int row, int col, int num)
 {
     return ((row - 1) * 9 + col - 1) * 9 + num;
 }
 
 // var from 1 to 729, is mapped to all situations of (row, col, num)
-void Sudoku::transToPos(int var, int &row, int &col, int &num) 
+void Sudoku::TransToPos(int var, int &row, int &col, int &num) 
 {
     var--;
     num = var % 9 + 1;
@@ -142,7 +157,7 @@ void Sudoku::transToPos(int var, int &row, int &col, int &num)
 }
 
 // generate CNF file for sudoku a[9][9], store it in fileName
-void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM) 
+void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)  
 {
     static const int row[11] = {1, 1, 1, 4, 4, 4, 7, 7, 7, 2, 6};
     static const int col[11] = {1, 4, 7, 1, 4, 7, 1, 4, 7, 2, 6};
@@ -161,10 +176,10 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
         for(int j = 0; j < 9; ++j)
         {
             if(!a[i][j])continue;
-            printf("%d 0\n", transToVar(i + 1, j + 1, a[i][j]));
+            printf("%d 0\n", TransToVar(i + 1, j + 1, a[i][j]));
             for(int k = 1; k <= 9; ++k)
                 if(k != a[i][j])
-                    printf("%d 0\n", -transToVar(i + 1, j + 1, k));
+                    printf("%d 0\n", -TransToVar(i + 1, j + 1, k));
         }
 
     // each empty cell has at least one number
@@ -173,7 +188,7 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
         {
             if(a[i - 1][j - 1] != 0) continue;
             for(int num = 1; num <= 9; ++num)
-                printf("%d ", transToVar(i, j, num));
+                printf("%d ", TransToVar(i, j, num));
             printf("0\n");
         }
 
@@ -183,9 +198,9 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
             for(int k1 = 1; k1 <= 9; ++k1)
                 for(int k2 = k1 + 1; k2 <= 9; ++k2)
                 {
-                    printf("%d %d 0\n", -transToVar(i, j, k1), -transToVar(i, j, k2));
-                    printf("%d %d 0\n", -transToVar(i, k1, j), -transToVar(i, k2, j));
-                    printf("%d %d 0\n", -transToVar(k1, i, j), -transToVar(k2, i, j));
+                    printf("%d %d 0\n", -TransToVar(i, j, k1), -TransToVar(i, j, k2));
+                    printf("%d %d 0\n", -TransToVar(i, k1, j), -TransToVar(i, k2, j));
+                    printf("%d %d 0\n", -TransToVar(k1, i, j), -TransToVar(k2, i, j));
                 }
 
     // each number appears at most once in each 3 * 3 box
@@ -197,7 +212,7 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
                 {
                     int r1 = row[i] + k1 / 3, r2 = row[i] + k2 / 3;
                     int c1 = col[i] + k1 % 3, c2 = col[i] + k2 % 3;
-                    printf("%d %d 0\n", -transToVar(r1, c1, num), -transToVar(r2, c2, num));
+                    printf("%d %d 0\n", -TransToVar(r1, c1, num), -TransToVar(r2, c2, num));
                 }
     }
 
@@ -210,7 +225,7 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
     for(int num = 1; num <= 9; ++num)
         for(int i = 1; i <= 9; ++i)
             for(int j = i + 1; j <= 9; ++j)
-                printf("%d %d 0\n", -transToVar(i, 9 - i + 1, num), -transToVar(j, 9 - j + 1, num));
+                printf("%d %d 0\n", -TransToVar(i, 9 - i + 1, num), -TransToVar(j, 9 - j + 1, num));
 
     // each number appears at most once in % boxes
     for(int i = 9; i < 11; ++i)// i: box id
@@ -221,7 +236,7 @@ void Sudoku::ToCNFFile(const int a[9][9], const string fileName, bool _isM)
                 {
                     int r1 = row[i] + k1 / 3, r2 = row[i] + k2 / 3;
                     int c1 = col[i] + k1 % 3, c2 = col[i] + k2 % 3;
-                    printf("%d %d 0\n", -transToVar(r1, c1, num), -transToVar(r2, c2, num));
+                    printf("%d %d 0\n", -TransToVar(r1, c1, num), -TransToVar(r2, c2, num));
                 }
     }
 
@@ -240,7 +255,7 @@ void Sudoku::ReadRes(const int ans[], int _target[9][9])
         if(ans[var] == 1)
         {
             int row, col, num;
-            transToPos(var, row, col, num);
+            TransToPos(var, row, col, num);
             _target[row - 1][col - 1] = num;
         }
     }
@@ -261,7 +276,9 @@ void Sudoku::Play()
     int row, col, num;
     int var;
     bool winFlag = false;
-    printf("input format: a three-digit number, RowColNum, do not enter Spaces.\n");
+    printf("Input format: a three-digit number, RowColNum, do not enter Spaces.\n");
+    printf("For example, to put number 5 in row 3 column 4, input 345.\n");
+    printf("If Num = 0, it means to clear the cell.\n");
     printf("0 to check the answer\n");
     printf("1 to get a hint\n");
     while(!winFlag)
@@ -299,7 +316,7 @@ void Sudoku::Play()
         num = var % 10;
 
         
-        if(row < 1 || row > 9 || col < 1 || col > 9 || num < 1 || num > 9) 
+        if(row < 1 || row > 9 || col < 1 || col > 9 || num < 0 || num > 9) 
         {
             printf("Invalid input! Please input again!\n");
             continue;
@@ -371,11 +388,11 @@ void Sudoku::PrintGame(const int a[9][9], const int _base[9][9], int x, int y)
 // it will cover existing puzzle
 void Sudoku::GenerateSudokuPuzzle(int _remain, bool _isM)
 {
-    int nums[9];
+    Clear();
+
+    static int nums[9];
     for(int i = 0; i < 9; ++i) nums[i] = i + 1;
 
-    memset(grid, 0, sizeof(grid));
-    memset(base, 0, sizeof(base));
     isM = _isM;
     remainNum = _remain;
     bool flag = false; // if a legal sudoku final map is generated
@@ -471,9 +488,162 @@ void Sudoku::Lasvegas(const int finalMap[9][9], int target[9][9], int _remain, b
     return ;
 }
 
+void Sudoku::SetPuzzle()
+{
+    const string puzzleFile = gRootPath + "/restore/Puzzles.txt";
+    const string puzzleTypeMenu[] = 
+    {
+        "Create standard sodoku puzzle", 
+        "Create % sudoku puzzle",
+        "Back to main menu",
+        ""
+    };
+    const string completeEditingMenu[] = 
+    {
+        "Finish editing and save the puzzle",
+        "Continue editing",
+        "Play it now",
+        ""
+    };
 
+    Clear();
 
+    int choose = ChooseOptions(puzzleTypeMenu);
+    if(choose == 3) return ;
+    isM = (choose == 2 ? true : false);
+    if(isM) printf("Creating %% sudoku form.\n");
+    else printf("Creating standard sudoku form.\n");
 
+    for(int i = 0; i < 9; ++i)
+    {
+        bool breakFlag = false;
+        for(int j = 0; j < 9; ++j)
+        {
+            PrintGame(grid, grid, i + 1, j + 1);
+            printf("Input the number at position (%d, %d), -1 to break: ", i + 1, j + 1);
+            int num = chooseNum(-1, 9);
+            if(num == -1) {breakFlag = true; break;}
+            grid[i][j] = num;
+        }
+        if(breakFlag) break;
+    }
 
+    printf("Your initial input puzzle is:\n");
+    PrintGame(grid, grid);
+    printf("Now you can make modifications to specific cells.\n");
+    printf("Input format: a three-digit number, RowColNum, do not enter Spaces.\n");
+    printf("For example, to put number 5 in row 3 column 4, input 345.\n");
+    printf("If Num = 0, it means to clear the cell.\n");
+    printf("0 to check the current puzzle.\n");
+    printf("-1 to give up and return to main menu.\n");
+    int row, col, num;
+    int var = chooseNum(-1, 999);
+    bool completeFlag = false;
+    while(!completeFlag)// editing loop
+    {
+        while(var != 0)
+        {
+            if(var == -1) return ;
+
+            row = var / 100;
+            col = (var / 10) % 10;
+            num = var % 10;
+            
+            if(row < 1 || row > 9 || col < 1 || col > 9 || num < 0 || num > 9) 
+            {
+                printf("Invalid input! Please input again!\n");
+                var = chooseNum(-1, 999);
+                continue;
+            }
+    
+            grid[row - 1][col - 1] = num;
+            PrintGame(grid, grid, row, col);
+            printf("Input your move: ");
+            var = chooseNum(-1, 999);
+        }
+        printf("Checking the current puzzle...\n");
+        
+        remainNum = 0;
+        for(int i = 0; i < 9; ++i)
+            for(int j = 0; j < 9; ++j)
+            {
+                base[i][j] = grid[i][j];
+                if(grid[i][j] == 0) remainNum++;
+            }
+        if(remainNum == 0)
+        {
+            printf("It's already a complete puzzle!\n");
+            printf("Please dig at least one hole!\n");
+            printf("Input your move: ");
+            var = chooseNum(-1, 999);
+            continue;
+        }
+        else if(remainNum > 61)
+        {
+            printf("Too many holes! Please ensure at least 20 numbers are given.\n");
+            printf("Input your move: ");
+            var = chooseNum(-1, 999);
+            continue;
+        }
+
+        int legalStatus = SolveSudoku(grid, finalAns, isM) ? CheckLegal(grid, isM) : 0;
+        if(legalStatus == 0)
+        {
+            printf("The current puzzle is illegal or has no solution. Please continue modifying.\n");
+        }
+        else if(legalStatus == 1)
+        {
+            printf("Input is valid. Save it?: \n");
+            int choose = ChooseOptions(completeEditingMenu);
+            if(choose != 2)
+            {
+                canBePlayed = true;
+
+                if(choose == 1)
+                {
+                    printf("Saving the puzzle...\n");
+                    SavePuzzle(puzzleFile);
+                    printf("Puzzle saved successfully!\n");
+                    completeFlag = true;
+                }
+                else if(choose == 3)
+                {
+                    canBePlayed = true;
+                    printf("You can play the puzzle now!\n");
+                    Play();
+                }
+                return ;
+            }
+        }
+        else
+        {
+            printf("It's already a complete puzzle!\n");
+            printf("Please dig at least one hole!\n");
+        }
+        printf("Input your move: ");
+        var = chooseNum(-1, 999);
+    }
+    return ;
+}
+
+// the first line is isM (1 for %, 0 for standard)
+// the following 729 numbers(0/1) are the puzzle grid, which can be read by ReadRes()
+void Sudoku::SavePuzzle(const string fileName) const
+{
+    freopen(fileName.c_str(), "a", stdout);
+    static bool bin[730];
+    memset(bin, 0, sizeof(bin));
+    printf("%d ", isM ? 1 : 0);
+    for(int i = 0; i < 9; ++i)
+        for(int j = 0; j < 9; ++j)
+            if(base[i][j])
+                bin[TransToVar(i + 1, j + 1, base[i][j])] = 1;
+            
+    for(int var = 1; var <= 729; ++var)
+        printf("%d ", bin[var]);
+    printf("\n");
+    freopen("CON", "w", stdout);
+    return ;
+}
 
 

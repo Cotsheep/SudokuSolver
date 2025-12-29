@@ -12,6 +12,12 @@
 #include <ctime>
 #define MAXN 10005
 
+const std::string YES_NO_MENU[] = {
+    "Yes",
+    "No",
+    ""
+};
+
 extern std::string gRootPath; // global root path of the project
 int readInt();
 int readInt(std::string s, int &p);
